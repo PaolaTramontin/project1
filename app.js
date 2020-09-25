@@ -11,6 +11,10 @@ let kahleesiArr =[]
 let kahleesiArr2 =[]
 let cerseiArr=[]
 let cerseiArr2 =[]
+let tyrionArr =[]
+let tyrionArr2=[]
+let aryaArr =[]
+let aryaArr2=[]
 
 let div0 = document.getElementById("div0");
 let div1 = document.getElementById("div1");
@@ -33,11 +37,17 @@ let kahleesi4= document.getElementById("kahleesi4")
 let kahleesi7= document.getElementById("kahleesi7")
 let cersei5= document.getElementById("cersei5")
 let cersei11= document.getElementById("cersei11")
+let tyrion6= document.getElementById("tyrion6")
+let tyrion11= document.getElementById("tyrion11")
+let arya9= document.getElementById("arya9")
+let arya10= document.getElementById("arya10")
 
 let makeItDifferent= document.createElement("p")
 let makeItDifferentSnow= document.createElement("p")
 let makeItDifferentKahleesi= document.createElement("p")
 let makeItDifferentCersei= document.createElement("p")
+let makeItDifferentTyrion= document.createElement("p")
+let makeItDifferentArya= document.createElement("p")
 
 //function for drogo match
 
@@ -49,38 +59,110 @@ let makeItDifferentCersei= document.createElement("p")
 
 
 const drogoSnow = () => {
-  if (arrMatch.length === 1) {   //cheking for john and drogo
+  if (arrMatch.length === 1) {
+    //cheking for john and drogo
     if (snowArr.length === 1) {
       setTimeout(function () {
+        console.log("no match john and drogo");
         alert("No Match. Hurry up! winter is Coming!");
       }, 1000);
       snowArr = [];
-      snowArr2= [];
+      snowArr2 = [];
       arrMatch = [];
       arrMatch2 = [];
-      kahleesiArr =[];
-     kahleesiArr2 =[];
-     cerseiArr =[];
-     cerseiArr2 =[];
+      kahleesiArr = [];
+      kahleesiArr2 = [];
+      cerseiArr = [];
+      cerseiArr2 = [];
+      aryaArr = [];
+      aryaArr2 = [];
     }
   }
-  if (arrMatch.length === 1) {      //checking for drogo and danny
+  if (arrMatch.length === 1) {
+    //checking for drogo and danny
     if (kahleesiArr.length === 1) {
       setTimeout(function () {
+        console.log("no match kahleesi and drogo");
         alert("No Match. Hurry up! winter is Coming!");
       }, 1000);
       snowArr = [];
-      snowArr2= [];
+      snowArr2 = [];
       arrMatch = [];
       arrMatch2 = [];
-      kahleesiArr =[];
-     kahleesiArr2 =[];
-     cerseiArr =[];
-     cerseiArr2 =[];
+      kahleesiArr = [];
+      kahleesiArr2 = [];
+      cerseiArr = [];
+      cerseiArr2 = [];
+      tyrionArr = [];
+      tyrionArr2 = [];
+      aryaArr = [];
+      aryaArr2 = [];
     }
   }
-};
-
+  if (arrMatch.length === 1) {
+    //drogo and cersei
+    if (cerseiArr.length === 1) {
+      setTimeout(function () {
+        console.log("no match cersei and drogo");
+        alert("No Match. Hurry up! winter is Coming!");
+      }, 1000);
+      snowArr = [];
+      snowArr2 = [];
+      arrMatch = [];
+      arrMatch2 = [];
+      kahleesiArr = [];
+      kahleesiArr2 = [];
+      cerseiArr = [];
+      cerseiArr2 = [];
+      tyrionArr = [];
+      tyrionArr2 = [];
+      aryaArr = [];
+      aryaArr2 = [];
+    }
+  }
+  if (arrMatch.length === 1) {
+    //drogo and arya
+    if (aryaArr.length === 1) {
+      setTimeout(function () {
+        console.log("no match arya and drogo");
+        alert("No Match. Hurry up! winter is Coming!");
+      }, 1000);
+      snowArr = [];
+      snowArr2 = [];
+      arrMatch = [];
+      arrMatch2 = [];
+      kahleesiArr = [];
+      kahleesiArr2 = [];
+      cerseiArr = [];
+      cerseiArr2 = [];
+      tyrionArr = [];
+      tyrionArr2 = [];
+      aryaArr = [];
+      aryaArr2 = [];
+    }
+  }
+  if (cerseiArr.length === 1) {
+    //cersei and kahleesi
+    if (kahleesiArr.length === 1) {
+      setTimeout(function () {
+        console.log("no match cersei and kahleesi");
+        alert("No Match. Hurry up! winter is Coming!");
+      }, 1000);
+      snowArr = [];
+      snowArr2 = [];
+      arrMatch = [];
+      arrMatch2 = [];
+      kahleesiArr = [];
+      kahleesiArr2 = [];
+      cerseiArr = [];
+      cerseiArr2 = [];
+      tyrionArr = [];
+      tyrionArr2 = [];
+      aryaArr = [];
+      aryaArr2 = [];
+}
+}
+}
 
 //longest way possibe to check for matches
 
@@ -97,7 +179,7 @@ const checkMatches = () => {
         document.getElementById("drogo2").style.display = "block";
       }, 4000);
       setTimeout(function () {
-        alert("Good Job! Match found (づ｡◕‿‿◕｡)づ");
+        alert("Good Job! Match found. Moon of my life... ");
       }, 2000);
       div0.removeEventListener('click', changeDiv0);
       div2.removeEventListener('click', changeDiv2);
@@ -110,6 +192,10 @@ const checkMatches = () => {
      kahleesiArr2 =[];
      cerseiArr =[];
      cerseiArr2 =[];
+     tyrionArr=[];
+     tyrionArr2 =[];
+     aryaArr =[];
+     aryaArr2=[];
       } else {
         snowArr = [];
         snowArr2= [];
@@ -119,6 +205,10 @@ const checkMatches = () => {
        kahleesiArr2 =[];
        cerseiArr =[];
      cerseiArr2 =[];
+     tyrionArr=[];
+     tyrionArr2 =[];
+     aryaArr =[];
+     aryaArr2=[];
     }
   }
 }
@@ -150,6 +240,10 @@ const checkMatchesSnow = () => {
       kahleesiArr2 =[];
       cerseiArr =[];
      cerseiArr2 =[];
+     tyrionArr=[];
+     tyrionArr2 =[];
+     aryaArr =[];
+     aryaArr2=[];
       } else {
         setTimeout(function () {
           alert("Try again!");
@@ -162,6 +256,10 @@ const checkMatchesSnow = () => {
      kahleesiArr2 =[];
      cerseiArr =[];
      cerseiArr2 =[];
+     tyrionArr=[];
+     tyrionArr2 =[];
+     aryaArr =[];
+     aryaArr2=[];
     }
   }
 }
@@ -193,6 +291,10 @@ const checkMatchesKahleesi = () => {
      kahleesiArr2 =[];
      cerseiArr =[];
      cerseiArr2 =[];
+     tyrionArr=[];
+     tyrionArr2 =[];
+     aryaArr =[];
+     aryaArr2=[];
       } else {
         setTimeout(function () {
           alert("Try again!");
@@ -205,6 +307,10 @@ const checkMatchesKahleesi = () => {
      kahleesiArr2 =[];
      cerseiArr =[];
      cerseiArr2 =[];
+     tyrionArr=[];
+     tyrionArr2 =[];
+     aryaArr =[];
+     aryaArr2=[];
     }
   }
 }
@@ -234,8 +340,63 @@ const checkMatchesCersei = () => {
       arrMatch2 = [];
       kahleesiArr =[];
      kahleesiArr2 =[];
+     cerseiArr =[];
+     cerseiArr2 =[];
+     tyrionArr=[];
+     tyrionArr2 =[];
+     aryaArr =[];
+     aryaArr2=[];
+      } else {
+        setTimeout(function () {
+          alert("Try again!");
+        }, 2000);
+        snowArr = [];
+        snowArr2 = [];
+        arrMatch = [];
+        arrMatch2 = [];
+        kahleesiArr =[];
+      kahleesiArr2 =[];
+      cerseiArr =[];
+     cerseiArr2 =[];
+     tyrionArr=[];
+     tyrionArr2 =[];
+     aryaArr =[];
+     aryaArr2=[];
+    }
+  }
+}
+}
+
+const checkMatchesTyrion = () => {
+  for (let i = 0; i <tyrionArr.length; i++) {
+   drogoSnow()
+    if (tyrionArr[0] === tyrionArr[1]) {
+      if(tyrionArr2[0] !== tyrionArr2[1]){
+      console.log("win tyrion");
+      setTimeout(function () {
+        document.getElementById("tyrion6").style.display = "block";
+      }, 4000);
+      setTimeout(function () {
+        document.getElementById("tyrion8").style.display = "block";
+      }, 4000);
+      setTimeout(function () {
+        alert("Tyrion Lannister MATCH! .. He drinks and he knows things");
+      }, 2000);
+      div6.removeEventListener('click', changeDiv5);
+      div8.removeEventListener('click', changeDiv11);
+      
+      snowArr = [];
+      snowArr2= [];
+      arrMatch = [];
+      arrMatch2 = [];
+      kahleesiArr =[];
+     kahleesiArr2 =[];
      cerseiArr =[]
      cerseiArr2 =[]
+     tyrionArr=[]
+     tyrionArr2 =[]
+     aryaArr =[];
+     aryaArr2=[];
       } else {
         setTimeout(function () {
           alert("Try again!");
@@ -248,14 +409,71 @@ const checkMatchesCersei = () => {
       kahleesiArr2 =[];
       cerseiArr =[]
      cerseiArr2 =[]
+     tyrionArr=[]
+     tyrionArr2 =[]
+     aryaArr =[];
+     aryaArr2=[];
     }
   }
 }
 }
 
 
-//this has info about div0
+const checkMatchesArya = () => {
+  for (let i = 0; i <aryaArr.length; i++) {
+   drogoSnow()
+    if (aryaArr[0] === aryaArr[1]) {
+      if(aryaArr2[0] !== aryaArr2[1]){
+      console.log("win arya");
+      setTimeout(function () {
+        document.getElementById("arya9").style.display = "block";
+      }, 4000);
+      setTimeout(function () {
+        document.getElementById("arya10").style.display = "block";
+      }, 4000);
+      setTimeout(function () {
+        alert("Arya Stark.. the girl has no name.");
+      }, 2000);
+      div9.removeEventListener('click', changeDiv9);
+      div10.removeEventListener('click', changeDiv10);
+      
+      snowArr = [];
+      snowArr2= [];
+      arrMatch = [];
+      arrMatch2 = [];
+      kahleesiArr =[];
+     kahleesiArr2 =[];
+     cerseiArr =[]
+     cerseiArr2 =[]
+     tyrionArr=[]
+     tyrionArr2 =[]
+     aryaArr =[];
+     aryaArr2=[];
+      } else {
+        setTimeout(function () {
+          alert("Try again!");
+        }, 2000);
+        snowArr = [];
+        snowArr2 = [];
+        arrMatch = [];
+        arrMatch2 = [];
+        kahleesiArr =[];
+      kahleesiArr2 =[];
+      cerseiArr =[]
+     cerseiArr2 =[]
+     tyrionArr=[]
+     tyrionArr2 =[]
+     aryaArr =[];
+     aryaArr2=[];
+    }
+  }
+}
+}
 
+
+
+
+//this has info about div0
 let changeDiv0 = (e) => {
   div0.classList.add("drogo");
   makeItDifferent.innerText="0"
@@ -263,7 +481,7 @@ let changeDiv0 = (e) => {
 
   setTimeout(function () {
     document.getElementById("drogo0").style.display = "block";
-  }, 1000);
+  }, 30);
   setTimeout(function () {
     document.getElementById("drogo0").style.display = "none";
   }, 2000);
@@ -278,7 +496,6 @@ let changeDiv0 = (e) => {
 
 
 //this has info about div 1 
-
 let changeDiv1 = (e) => {
   div1.classList.add("snow");
   makeItDifferentSnow.innerText="1"
@@ -301,7 +518,6 @@ let changeDiv1 = (e) => {
 
 
 //this has info about div2
-
 let changeDiv2 = (e) => {
   div2.classList.add("drogo");
   
@@ -312,7 +528,7 @@ let changeDiv2 = (e) => {
   //show the photo
   setTimeout(function () {
     document.getElementById("drogo2").style.display = "block";
-  }, 1000);
+  }, 30);
 
   //hide the photo
   setTimeout(function () {
@@ -333,7 +549,6 @@ let changeDiv2 = (e) => {
 
 
 //this has info about div 3
-
 let changeDiv3 = (e) => {
   div3.classList.add("snow");
   makeItDifferentSnow.innerText="3"
@@ -356,7 +571,6 @@ let changeDiv3 = (e) => {
 
 
 //this has info about div 4
-
 let changeDiv4 = (e) => {
   div4.classList.add("kahleesi");
   makeItDifferentKahleesi.innerText="4"
@@ -379,7 +593,6 @@ let changeDiv4 = (e) => {
 
 
 //this has info about div 5
-
 let changeDiv5 = (e) => {
   div5.classList.add("cersei");
   makeItDifferentCersei.innerText="5"
@@ -401,8 +614,30 @@ let changeDiv5 = (e) => {
 };
 
 
-//this has info about div 7
 
+//this has info about div 6 
+let changeDiv6 = (e) => {
+  div6.classList.add("tyrion");
+  makeItDifferentTyrion.innerText="6"
+  div6.appendChild(makeItDifferentTyrion)
+
+  setTimeout(function () {
+    document.getElementById("tyrion6").style.display = "block";
+  }, 30);
+  setTimeout(function () {
+    document.getElementById("tyrion6").style.display = "none";
+  }, 2000);
+  tyrionArr.push(div6.classList[1]);
+  tyrionArr2.push(div6.querySelector("p").innerText)
+  console.log(e.target);
+  console.log(e.type);
+  console.log(tyrionArr);
+  console.log(tyrionArr2)
+  checkMatchesTyrion();
+};
+
+
+//this has info about div 7
 let changeDiv7 = (e) => {
   div7.classList.add("kahleesi");
   makeItDifferentKahleesi.innerText="7"
@@ -424,8 +659,74 @@ let changeDiv7 = (e) => {
 };
 
 
-// this has info about div 11 
+//this has info about div 8
+let changeDiv8 = (e) => {
+  div8.classList.add("tyrion");
+  makeItDifferentTyrion.innerText="8"
+  div8.appendChild(makeItDifferentTyrion)
 
+  setTimeout(function () {
+    document.getElementById("tyrion8").style.display = "block";
+  }, 30);
+  setTimeout(function () {
+    document.getElementById("tyrion8").style.display = "none";
+  }, 2000);
+  tyrionArr.push(div8.classList[1]);
+  tyrionArr2.push(div8.querySelector("p").innerText)
+  console.log(e.target);
+  console.log(e.type);
+  console.log(tyrionArr);
+  console.log(tyrionArr2)
+  checkMatchesTyrion();
+};
+
+
+
+//this has info about div 9
+
+let changeDiv9 = (e) => {
+  div9.classList.add("arya");
+  makeItDifferentArya.innerText="9"
+  div9.appendChild(makeItDifferentArya)
+
+  setTimeout(function () {
+    document.getElementById("arya9").style.display = "block";
+  }, 30);
+  setTimeout(function () {
+    document.getElementById("arya9").style.display = "none";
+  }, 2000);
+  aryaArr.push(div9.classList[1]);
+  aryaArr2.push(div9.querySelector("p").innerText)
+  console.log(e.target);
+  console.log(e.type);
+  console.log(aryaArr);
+  console.log(aryaArr2)
+  checkMatchesArya();
+};
+
+// this has info about div 10
+
+let changeDiv10 = (e) => {
+  div10.classList.add("arya");
+  makeItDifferentArya.innerText="10"
+  div10.appendChild(makeItDifferentArya)
+
+  setTimeout(function () {
+    document.getElementById("arya10").style.display = "block";
+  }, 30);
+  setTimeout(function () {
+    document.getElementById("arya10").style.display = "none";
+  }, 2000);
+  aryaArr.push(div10.classList[1]);
+  aryaArr2.push(div10.querySelector("p").innerText)
+  console.log(e.target);
+  console.log(e.type);
+  console.log(aryaArr);
+  console.log(aryaArr2)
+  checkMatchesArya();
+};
+
+// this has info about div 11 
 let changeDiv11 = (e) => {
   div11.classList.add("cersei");
   makeItDifferentCersei.innerText="11"
@@ -457,7 +758,11 @@ document.addEventListener("DOMContentLoaded", () => {
   div3.addEventListener("click", changeDiv3);
   div4.addEventListener("click", changeDiv4);
   div5.addEventListener("click", changeDiv5);
+  div6.addEventListener("click", changeDiv6);
   div7.addEventListener("click", changeDiv7);
+  div8.addEventListener("click", changeDiv8);
+  div9.addEventListener("click", changeDiv9);
+  div10.addEventListener("click", changeDiv10);
   div11.addEventListener("click", changeDiv11);
 });
 
