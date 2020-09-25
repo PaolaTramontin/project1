@@ -1,100 +1,287 @@
 console.log("hi");
 
-
 //GLOBAL VARIABLES
 
-let squares = document.querySelectorAll(".square")
+let squares = document.querySelectorAll(".square");
 let arrMatch = [];
-let ArrLength = 2;
+let arrMatch2= [];
+let snowArr =[];
+let snowArr2 =[];
+let kahleesiArr =[]
+let kahleesiArr2 =[]
 
-
- const checkMatches = () => {
-  for (let i=0; i<ArrLength; i++){
-   if(arrMatch[0]==arrMatch[1] ==!undefined)
-   console.log("win")
-
-   //drogoWin = document.createElement(img)
-   //console.log(arrMatch[0])  
-  //document.getElementById("drogo2").style.display = "block";
-  //document.getElementById("drogo0").style.display = "block";
-}
- }
-// while (arrMatch.length <= 2) {
-//   arrMatch.push("")
-// }
-
-//changing pic on div0
 let div0 = document.getElementById("div0");
+let div1 = document.getElementById("div1");
+let div2 = document.getElementById("div2");
+let div3 = document.getElementById("div3");
+let div4= document.getElementById("div4")
+let div5= document.getElementById("div5")
+let div6= document.getElementById("div6")
+let div7= document.getElementById("div7")
+let div8= document.getElementById("div8")
+let div9= document.getElementById("div9")
+let div10= document.getElementById("div10")
+let div11= document.getElementById("div11")
+
 let drogoPic = document.getElementById("drogo0");
+let drogoPic2 = document.getElementById("drogo2");
+let snow1= document.getElementById("snow1")
+let snow3= document.getElementById("snow3")
+let kahleesi4= document.getElementById("kahleesi4")
+let kahleesi7= document.getElementById("kahleesi7")
 
 
+let makeItDifferent= document.createElement("p")
+let makeItDifferentSnow= document.createElement("p")
+let makeItDifferentKahleesi= document.createElement("p")
+
+//function for drogo match
+
+// if(divId) if classlist[1] is the same but is not gimme alert radding event listener only once. how to temp remove event listener as soon as the div is clicked. if not match put the evvent back on.
+
+
+
+//maybe try doing if arr 1 or 2. because i poushe diffeent numbers into all of them
+const drogoSnow = () => {
+  if (arrMatch.length===1){
+    if (snowArr.length===1){
+      setTimeout(function () {
+        alert("No Match. Hurry up! winter is Coming!");
+      }, 1000);
+      arrMatch =[]
+      arrMatch2 =[]
+      snowArr =[]
+      snowArr2 =[]
+    }
+  }
+}
+
+
+
+const checkMatches = () => {
+  for (let i = 0; i < arrMatch.length; i++) {
+    drogoSnow()
+    if (arrMatch[0] === arrMatch[1]) {
+      if(arrMatch2[0] !== arrMatch2[1]){
+      console.log("win");
+      setTimeout(function () {
+        document.getElementById("drogo0").style.display = "block";
+      }, 4000);
+      setTimeout(function () {
+        document.getElementById("drogo2").style.display = "block";
+      }, 4000);
+      setTimeout(function () {
+        alert("Good Job! Match found (づ｡◕‿‿◕｡)づ");
+      }, 2000);
+      div0.removeEventListener('click', changeDiv0);
+      div2.removeEventListener('click', changeDiv2);
+      
+      arrMatch = [];
+      arrMatch2= [];
+      snowArr =[];
+      snowArr2 =[]
+      } else {
+        arrMatch = [];
+        arrMatch2 = [];
+        snowArr =[];
+        snowArr2 =[]
+    }
+  }
+}
+}
+
+
+const checkMatchesSnow = () => {
+  for (let i = 0; i <snowArr.length; i++) {
+   drogoSnow()
+    if (snowArr[0] === snowArr[1]) {
+      if(snowArr2[0] !== snowArr2[1]){
+      console.log("win");
+      setTimeout(function () {
+        document.getElementById("snow1").style.display = "block";
+      }, 4000);
+      setTimeout(function () {
+        document.getElementById("snow3").style.display = "block";
+      }, 4000);
+      setTimeout(function () {
+        alert("Good Job! here is a popular Jon Snow quote: They Were The Shields That Guarded The Realms Of Men.");
+      }, 2000);
+      div1.removeEventListener('click', changeDiv1);
+      div3.removeEventListener('click', changeDiv3);
+      
+      snowArr = [];
+      snowArr2= [];
+      arrMatch = [];
+      arrMatch2 = [];
+      } else {
+        setTimeout(function () {
+          alert("Try again!");
+        }, 2000);
+        snowArr = [];
+        snowArr2 = [];
+        arrMatch = [];
+        arrMatch2 = [];
+    }
+  }
+}
+}
+
+
+
+
+
+
+//this has info about div0
 
 let changeDiv0 = (e) => {
-    div0.appendChild(drogoPic);
-    div0.classList.add("drogo")
+  div0.classList.add("drogo");
+  makeItDifferent.innerText="0"
+  div0.appendChild(makeItDifferent)
+
   setTimeout(function () {
     document.getElementById("drogo0").style.display = "block";
   }, 1000);
   setTimeout(function () {
     document.getElementById("drogo0").style.display = "none";
-  }, 3000);
-  arrMatch.push(div0.classList[1])
-  console.log(e.target)
-  console.log(e.type)
-  console.log(arrMatch)
-  checkMatches()
+  }, 2000);
+  arrMatch.push(div0.classList[1]);
+  arrMatch2.push(div0.querySelector("p").innerText)
+  console.log(e.target);
+  console.log(e.type);
+  console.log(arrMatch);
+  console.log(arrMatch2)
+  checkMatches();
 };
+
+
+//this has info about div 1 
+
+let changeDiv1 = (e) => {
+  div1.classList.add("snow");
+  makeItDifferentSnow.innerText="1"
+  div1.appendChild(makeItDifferentSnow)
+
+  setTimeout(function () {
+    document.getElementById("snow1").style.display = "block";
+  }, 30);
+  setTimeout(function () {
+    document.getElementById("snow1").style.display = "none";
+  }, 2000);
+  snowArr.push(div1.classList[1]);
+  snowArr2.push(div1.querySelector("p").innerText)
+  console.log(e.target);
+  console.log(e.type);
+  console.log(snowArr);
+  console.log(snowArr2)
+  checkMatchesSnow();
+};
+
 
 
 //this has info about div2
 
-let div2 = document.getElementById("div2");
-let drogoPic2 = document.getElementById("drogo2");
-
 let changeDiv2 = (e) => {
-    div2.appendChild(drogoPic2);
-    div2.classList.add("drogo")
-    setTimeout(function () {
-        document.getElementById("drogo2").style.display = "block";
-    }, 1000);
-    setTimeout(function () {
-        document.getElementById("drogo2").style.display = "none";
-    }, 3000);
-    arrMatch.push(div2.classList[1])
-    console.log(e.target)
-    console.log(e.type)
-    console.log(arrMatch)
-    checkMatches()
-}
+  div2.classList.add("drogo");
+  
+  //make it different so it doesnt match with itself
+  let makeItDifferent= document.createElement("p")
+  makeItDifferent.innerText="2"
+  div2.appendChild(makeItDifferent)
+  //show the photo
+  setTimeout(function () {
+    document.getElementById("drogo2").style.display = "block";
+  }, 1000);
 
+  //hide the photo
+  setTimeout(function () {
+    document.getElementById("drogo2").style.display = "none";
+  }, 2000);
 
-//winning conditionals
+  //push into the array
+  arrMatch.push(div2.classList[1]);
+  arrMatch2.push(div2.querySelector("p").innerText)
 
-// document.addEventListener("click", function (e){
-//     for(let i=0; i<squares.length; i++)
-//     if (event.target.matches("[drogo]")){
-//             alert("hi")
-//         }
-//  }) 
-//  const winningMatches = (e) =>{
-//     if (e.target == div0 || e.target== div2){
-//         alert("this worked")
-//  }
-//  }
-//     for(let i=0; i<squares.length; i++){
-//     if (squares[i].classList.contains("drogo")) {
-//             alert("this worked")
-//     }
-// }
-// }
+  //make sure it works
+  console.log(e.target);
+  console.log(e.type);
+  console.log(arrMatch);
+  console.log(arrMatch2)
+  checkMatches();
+};
 
 
 
 
-// const winningMatches = () =>{
-//     if (e.target == div0 && event.target==div2)
-//             alert("this worked")
-//     }
+
+
+//this has info about div 3
+
+let changeDiv3 = (e) => {
+  div3.classList.add("snow");
+  makeItDifferentSnow.innerText="3"
+  div3.appendChild(makeItDifferentSnow)
+
+  setTimeout(function () {
+    document.getElementById("snow3").style.display = "block";
+  }, 30);
+  setTimeout(function () {
+    document.getElementById("snow3").style.display = "none";
+  }, 2000);
+  snowArr.push(div3.classList[1]);
+  snowArr2.push(div3.querySelector("p").innerText)
+  console.log(e.target);
+  console.log(e.type);
+  console.log(snowArr);
+  console.log(snowArr2)
+  checkMatchesSnow();
+};
+
+
+//this has info about div 4
+
+let changeDiv4 = (e) => {
+  div4.classList.add("kahleesi");
+  makeItDifferentKahleesi.innerText="4"
+  div4.appendChild(makeItDifferentKahleesi)
+
+  setTimeout(function () {
+    document.getElementById("kahleesi4").style.display = "block";
+  }, 30);
+  setTimeout(function () {
+    document.getElementById("kahleesi4").style.display = "none";
+  }, 2000);
+  kahleesiArr.push(div4.classList[1]);
+  kahleesiArr2.push(div4.querySelector("p").innerText)
+  console.log(e.target);
+  console.log(e.type);
+  console.log(kahleesiArr);
+  console.log(kahleesiArr2)
+  checkMatchesKahleesi();
+};
+
+//this has info about div 7
+
+let changeDiv7 = (e) => {
+  div7.classList.add("kahleesi");
+  makeItDifferentKahleesi.innerText="7"
+  div7.appendChild(makeItDifferentKahleesi)
+
+  setTimeout(function () {
+    document.getElementById("kahleesi7").style.display = "block";
+  }, 30);
+  setTimeout(function () {
+    document.getElementById("kahleesi7").style.display = "none";
+  }, 2000);
+  kahleesiArr.push(div7.classList[1]);
+  kahleesiArr2.push(div7.querySelector("p").innerText)
+  console.log(e.target);
+  console.log(e.type);
+  console.log(kahleesiArr);
+  console.log(kahleesiArr2)
+  checkMatchesKahleesi();
+};
+
+
 
 
 
@@ -102,14 +289,13 @@ let changeDiv2 = (e) => {
 //put it in the dom
 
 document.addEventListener("DOMContentLoaded", () => {
-    div0.addEventListener("click", changeDiv0);
-    div2.addEventListener("click", changeDiv2);
-
+  div0.addEventListener("click", changeDiv0);
+  div1.addEventListener("click", changeDiv1);
+  div2.addEventListener("click", changeDiv2);
+  div3.addEventListener("click", changeDiv3);
+  div4.addEventListener("click", changeDiv4);
+  div7.addEventListener("click", changeDiv7);
 });
-
-//append drogo to div0. but hide it. then set an add event listener for a click. once it is clicked, set a time out of 3 seconds. 
-//if div 0 and div 2 get clicked after each other than display the pics, aka change the img style to display block instead of none.
-
 
 
 

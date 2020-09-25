@@ -1,7 +1,7 @@
 .square {
     background-color:black;
-    border:10px solid gray;
-    display:inline-block;
+    border:20px solid gray;
+    display:block;
     width:240px;
     height:410px;
     align-content: center;
@@ -14,11 +14,23 @@
     justify-content: center;
     align-content: center;
 }
-body {
+
+p{
+    font-size:0px;
+}
+/*body {
     margin: 0;
 } 
 .square:first-child,
 .square:nth-child(2),
 .square:nth-child(3){
     border-top: none;
+}
+*/
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block; 
+    align-content: center;
 }
