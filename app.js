@@ -769,3 +769,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // set images to have same class. and then do a function with a conditional. if these two divs have the same class. then change the image style to block;
+
+//https://sf.co.ua/13/06/wallpaper-2845886.jpg
+//https://sf.co.ua/13/06/wallpaper-2845886.jpg
