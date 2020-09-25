@@ -9,6 +9,8 @@ let snowArr =[];
 let snowArr2 =[];
 let kahleesiArr =[]
 let kahleesiArr2 =[]
+let cerseiArr=[]
+let cerseiArr2 =[]
 
 let div0 = document.getElementById("div0");
 let div1 = document.getElementById("div1");
@@ -29,11 +31,13 @@ let snow1= document.getElementById("snow1")
 let snow3= document.getElementById("snow3")
 let kahleesi4= document.getElementById("kahleesi4")
 let kahleesi7= document.getElementById("kahleesi7")
-
+let cersei5= document.getElementById("cersei5")
+let cersei11= document.getElementById("cersei11")
 
 let makeItDifferent= document.createElement("p")
 let makeItDifferentSnow= document.createElement("p")
 let makeItDifferentKahleesi= document.createElement("p")
+let makeItDifferentCersei= document.createElement("p")
 
 //function for drogo match
 
@@ -42,28 +46,50 @@ let makeItDifferentKahleesi= document.createElement("p")
 
 
 //maybe try doing if arr 1 or 2. because i poushe diffeent numbers into all of them
+
+
 const drogoSnow = () => {
-  if (arrMatch.length===1){
-    if (snowArr.length===1){
+  if (arrMatch.length === 1) {   //cheking for john and drogo
+    if (snowArr.length === 1) {
       setTimeout(function () {
         alert("No Match. Hurry up! winter is Coming!");
       }, 1000);
-      arrMatch =[]
-      arrMatch2 =[]
-      snowArr =[]
-      snowArr2 =[]
+      snowArr = [];
+      snowArr2= [];
+      arrMatch = [];
+      arrMatch2 = [];
+      kahleesiArr =[];
+     kahleesiArr2 =[];
+     cerseiArr =[];
+     cerseiArr2 =[];
     }
   }
-}
+  if (arrMatch.length === 1) {      //checking for drogo and danny
+    if (kahleesiArr.length === 1) {
+      setTimeout(function () {
+        alert("No Match. Hurry up! winter is Coming!");
+      }, 1000);
+      snowArr = [];
+      snowArr2= [];
+      arrMatch = [];
+      arrMatch2 = [];
+      kahleesiArr =[];
+     kahleesiArr2 =[];
+     cerseiArr =[];
+     cerseiArr2 =[];
+    }
+  }
+};
 
 
+//longest way possibe to check for matches
 
 const checkMatches = () => {
   for (let i = 0; i < arrMatch.length; i++) {
     drogoSnow()
     if (arrMatch[0] === arrMatch[1]) {
       if(arrMatch2[0] !== arrMatch2[1]){
-      console.log("win");
+      console.log("win drogo");
       setTimeout(function () {
         document.getElementById("drogo0").style.display = "block";
       }, 4000);
@@ -76,27 +102,34 @@ const checkMatches = () => {
       div0.removeEventListener('click', changeDiv0);
       div2.removeEventListener('click', changeDiv2);
       
+      snowArr = [];
+      snowArr2= [];
       arrMatch = [];
-      arrMatch2= [];
-      snowArr =[];
-      snowArr2 =[]
+      arrMatch2 = [];
+      kahleesiArr =[];
+     kahleesiArr2 =[];
+     cerseiArr =[];
+     cerseiArr2 =[];
       } else {
+        snowArr = [];
+        snowArr2= [];
         arrMatch = [];
         arrMatch2 = [];
-        snowArr =[];
-        snowArr2 =[]
+        kahleesiArr =[];
+       kahleesiArr2 =[];
+       cerseiArr =[];
+     cerseiArr2 =[];
     }
   }
 }
 }
-
 
 const checkMatchesSnow = () => {
   for (let i = 0; i <snowArr.length; i++) {
    drogoSnow()
     if (snowArr[0] === snowArr[1]) {
       if(snowArr2[0] !== snowArr2[1]){
-      console.log("win");
+      console.log("win snow");
       setTimeout(function () {
         document.getElementById("snow1").style.display = "block";
       }, 4000);
@@ -113,6 +146,53 @@ const checkMatchesSnow = () => {
       snowArr2= [];
       arrMatch = [];
       arrMatch2 = [];
+      kahleesiArr =[];
+      kahleesiArr2 =[];
+      cerseiArr =[];
+     cerseiArr2 =[];
+      } else {
+        setTimeout(function () {
+          alert("Try again!");
+        }, 2000);
+        snowArr = [];
+      snowArr2= [];
+      arrMatch = [];
+      arrMatch2 = [];
+      kahleesiArr =[];
+     kahleesiArr2 =[];
+     cerseiArr =[];
+     cerseiArr2 =[];
+    }
+  }
+}
+}
+
+const checkMatchesKahleesi = () => {
+  for (let i = 0; i <kahleesiArr.length; i++) {
+   drogoSnow()
+    if (kahleesiArr[0] === kahleesiArr[1]) {
+      if(kahleesiArr2[0] !== kahleesiArr2[1]){
+      console.log("win kahleesi");
+      setTimeout(function () {
+        document.getElementById("kahleesi4").style.display = "block";
+      }, 4000);
+      setTimeout(function () {
+        document.getElementById("kahleesi7").style.display = "block";
+      }, 4000);
+      setTimeout(function () {
+        alert("Dracarys! a Match has been made.");
+      }, 2000);
+      div4.removeEventListener('click', changeDiv1);
+      div7.removeEventListener('click', changeDiv3);
+      
+      snowArr = [];
+      snowArr2= [];
+      arrMatch = [];
+      arrMatch2 = [];
+      kahleesiArr =[];
+     kahleesiArr2 =[];
+     cerseiArr =[];
+     cerseiArr2 =[];
       } else {
         setTimeout(function () {
           alert("Try again!");
@@ -121,14 +201,57 @@ const checkMatchesSnow = () => {
         snowArr2 = [];
         arrMatch = [];
         arrMatch2 = [];
+        kahleesiArr =[];
+     kahleesiArr2 =[];
+     cerseiArr =[];
+     cerseiArr2 =[];
     }
   }
 }
 }
 
-
-
-
+const checkMatchesCersei = () => {
+  for (let i = 0; i <cerseiArr.length; i++) {
+   drogoSnow()
+    if (cerseiArr[0] === cerseiArr[1]) {
+      if(cerseiArr2[0] !== cerseiArr2[1]){
+      console.log("win Cersei");
+      setTimeout(function () {
+        document.getElementById("cersei5").style.display = "block";
+      }, 4000);
+      setTimeout(function () {
+        document.getElementById("cersei11").style.display = "block";
+      }, 4000);
+      setTimeout(function () {
+        alert("Well Played, You matched Cersei Lannister. Everyone Who Isn't Us Is An Enemy..");
+      }, 2000);
+      div5.removeEventListener('click', changeDiv5);
+      div11.removeEventListener('click', changeDiv11);
+      
+      snowArr = [];
+      snowArr2= [];
+      arrMatch = [];
+      arrMatch2 = [];
+      kahleesiArr =[];
+     kahleesiArr2 =[];
+     cerseiArr =[]
+     cerseiArr2 =[]
+      } else {
+        setTimeout(function () {
+          alert("Try again!");
+        }, 2000);
+        snowArr = [];
+        snowArr2 = [];
+        arrMatch = [];
+        arrMatch2 = [];
+        kahleesiArr =[];
+      kahleesiArr2 =[];
+      cerseiArr =[]
+     cerseiArr2 =[]
+    }
+  }
+}
+}
 
 
 //this has info about div0
@@ -177,7 +300,6 @@ let changeDiv1 = (e) => {
 };
 
 
-
 //this has info about div2
 
 let changeDiv2 = (e) => {
@@ -208,10 +330,6 @@ let changeDiv2 = (e) => {
   console.log(arrMatch2)
   checkMatches();
 };
-
-
-
-
 
 
 //this has info about div 3
@@ -259,6 +377,30 @@ let changeDiv4 = (e) => {
   checkMatchesKahleesi();
 };
 
+
+//this has info about div 5
+
+let changeDiv5 = (e) => {
+  div5.classList.add("cersei");
+  makeItDifferentCersei.innerText="5"
+  div5.appendChild(makeItDifferentCersei)
+
+  setTimeout(function () {
+    document.getElementById("cersei5").style.display = "block";
+  }, 30);
+  setTimeout(function () {
+    document.getElementById("cersei5").style.display = "none";
+  }, 2000);
+  cerseiArr.push(div5.classList[1]);
+  cerseiArr2.push(div5.querySelector("p").innerText)
+  console.log(e.target);
+  console.log(e.type);
+  console.log(cerseiArr);
+  console.log(cerseiArr2)
+  checkMatchesCersei();
+};
+
+
 //this has info about div 7
 
 let changeDiv7 = (e) => {
@@ -282,7 +424,27 @@ let changeDiv7 = (e) => {
 };
 
 
+// this has info about div 11 
 
+let changeDiv11 = (e) => {
+  div11.classList.add("cersei");
+  makeItDifferentCersei.innerText="11"
+  div11.appendChild(makeItDifferentCersei)
+
+  setTimeout(function () {
+    document.getElementById("cersei11").style.display = "block";
+  }, 30);
+  setTimeout(function () {
+    document.getElementById("cersei11").style.display = "none";
+  }, 2000);
+  cerseiArr.push(div11.classList[1]);
+  cerseiArr2.push(div11.querySelector("p").innerText)
+  console.log(e.target);
+  console.log(e.type);
+  console.log(cerseiArr);
+  console.log(cerseiArr2)
+  checkMatchesCersei();
+};
 
 
 
@@ -294,7 +456,9 @@ document.addEventListener("DOMContentLoaded", () => {
   div2.addEventListener("click", changeDiv2);
   div3.addEventListener("click", changeDiv3);
   div4.addEventListener("click", changeDiv4);
+  div5.addEventListener("click", changeDiv5);
   div7.addEventListener("click", changeDiv7);
+  div11.addEventListener("click", changeDiv11);
 });
 
 
