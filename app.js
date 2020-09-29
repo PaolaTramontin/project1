@@ -808,10 +808,13 @@ const reStart = () =>{
 
 // set images to have same class. and then do a function with a conditional. if these two divs have the same class. then change the image style to block;
 
-//https://sf.co.ua/13/06/wallpaper-2845886.jpg
-//https://sf.co.ua/13/06/wallpaper-2845886.jpg
+//https://sf.co.ua/13/06/wallpaper-2845886.jpgb  house stark
 
+//https://wallpapercave.com/wp/wp3238965.jpg'     dragon
 
+//https://wallpapercave.com/wp/bmvptdC.jpg   lamps
+
+// https://airwallpaper.com/wp-content/uploads/images2/celebrities-game-thrones-emilia-clarke-background.jpg    danny
 
 
 

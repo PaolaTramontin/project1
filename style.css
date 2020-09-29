@@ -3,21 +3,23 @@
     border:10px solid gray;
     display:inline-block;
     width:500px;
-    height:700px;
+    height:650px;
     outline-style: 5px solid red;
     outline-style: solid;
     margin:auto;
+    border-top: 20px solid rgba(7, 99, 204, 0.555) !important;
+    cursor: pointer;
 }
 
 .square:hover {
-    background-color:rgb(97, 7, 7);
+    background-color:rgb(9, 29, 119);
 }
 .container {
     display:grid;
     grid-template-columns: repeat(3,auto);
     margin-right:1400px;
     margin-left:1600px;
-    margin-bottom:1900px;
+    margin-bottom:100px;
     margin-top:1px;
     
 }
@@ -28,7 +30,7 @@ p{
 body {
     margin: 50;
     border:100px;
-    background-image: url('https://wallpapercave.com/wp/wp3238965.jpg');
+    background-image: url('https://wallpaperaccess.com/full/476735.jpg');
     background-repeat: no-repeat;
     background-color:black;
     background-attachment: fixed;
@@ -51,14 +53,13 @@ h1 {
     display: block;
    text-align: center;
    padding:5px;
-
 }
 
- * {
+ /** {
        box-sizing: border-box;
-       }
+       } */
 
 #headerPic{
-    width: 25%;
+    width: 33%;
     margin-left:200px;
        }
