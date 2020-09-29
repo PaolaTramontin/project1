@@ -58,7 +58,7 @@ h1 {
        box-sizing: border-box;
        }
 
-       #headerPic{
-           width: 25%;
-           margin-left:200px;
+#headerPic{
+    width: 25%;
+    margin-left:200px;
        }

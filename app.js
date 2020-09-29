@@ -681,7 +681,6 @@ let changeDiv8 = (e) => {
 };
 
 
-
 //this has info about div 9
 
 let changeDiv9 = (e) => {
@@ -767,8 +766,53 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+const reStart = () =>{
+ //resetting drogo
+  document.getElementById("drogo0").style.display = "none";
+  document.getElementById("drogo2").style.display = "none";
+  div0.addEventListener("click", changeDiv0);
+  div2.addEventListener("click", changeDiv2);
+
+  //resetting jon snow
+  document.getElementById("snow1").style.display = "none";
+  document.getElementById("snow3").style.display = "none";
+  div1.addEventListener("click", changeDiv1);
+  div3.addEventListener("click", changeDiv3);
+
+  //resetting kahleesi
+
+  document.getElementById("kahleesi4").style.display = "none";
+  document.getElementById("kahleesi7").style.display = "none";
+  div4.addEventListener("click", changeDiv4);
+  div7.addEventListener("click", changeDiv7);
+
+  //resetting cersei
+  document.getElementById("cersei11").style.display = "none";
+  document.getElementById("cersei5").style.display = "none";
+  div5.addEventListener("click", changeDiv5);
+  div11.addEventListener("click", changeDiv11)
+
+
+  //resetting tyrion
+  document.getElementById("tyrion6").style.display = "none";
+  document.getElementById("tyrion8").style.display = "none";
+  div6.addEventListener("click", changeDiv6);
+  div8.addEventListener("click", changeDiv8);
+
+  //resetting Arya
+  document.getElementById("arya9").style.display = "none";
+  document.getElementById("arya10").style.display = "none";
+  div9.addEventListener("click", changeDiv9);
+  div10.addEventListener("click", changeDiv10);
+}
 
 // set images to have same class. and then do a function with a conditional. if these two divs have the same class. then change the image style to block;
 
 //https://sf.co.ua/13/06/wallpaper-2845886.jpg
 //https://sf.co.ua/13/06/wallpaper-2845886.jpg
+
+
+
+
+
+
