@@ -801,6 +801,8 @@ const shuffle = () => {
  }
 }
 
+
+//fatima notes and tips 
 //get the loop to remove the splice from the array ! done
 //once that is done, take the generated number and give it to one of the squares aka div
 // random to get me a random Number out th array, splcie it out of index of array . 
@@ -883,6 +885,8 @@ const reStart = () =>{
   document.getElementById("arya10").style.display = "none";
   div9.addEventListener("click", changeDiv9);
   div10.addEventListener("click", changeDiv10);
+
+  shuffle()
 }
 
 

@@ -1,9 +1,8 @@
 
+/* INFO ABOUT THE DIVS */
 .square:hover {
     background-color:rgb(9, 29, 119);
 }
-
-
 
 .square {
     height:900px;
@@ -14,50 +13,26 @@
     color:white;
 }
 
-
+/* INFO ABOUT THE CONTAINER */
 .container {
-display:flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-between;
-align-content: center;
-padding-left: 700px;
-padding-right: 700px;
-padding-left: 700px;
-padding-top: 250px;
-}
-
-
-/*.containerFlip {
     display:flex;
-    flex-direction: row-reverse;
-    /*flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
     padding-left: 700px;
     padding-right: 700px;
     padding-left: 700px;
-    padding-top: 250px; 
-    }
-    
+    padding-top: 250px;
+}
 
-.containerId {
-        display:flex;
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: center;
-        padding-left: 700px;
-        padding-right: 700px;
-        padding-left: 700px;
-        padding-top: 250px; 
-        }    
-*/
-
+/* INFO ABOUT THE PARAGRAPHS */
 
 p{
     font-size:0px;
 }
+
+/* INFO ABOUT THE BODY & BACKGROUND IMG */
 body {
     margin: 50;
     border:100px;
@@ -68,27 +43,29 @@ body {
     background-size: 100% 100%;
 } 
 
-
+/* INFO ABOUT THE IMGS INSIDE EACH DIV */
 img{
-margin:auto;
-width:100%;
-border: 3px solid gray;
+    width:100%;
+    height:100%;
+    border: 3px solid gray;
+    align-content: center;
 }
 
+/* INFO ABOUT THE HEADER IMG */
 h1 {
     display: block;
-   text-align: center;
-   padding:5px;
+    text-align: center;
+    padding:5px;
 }
 
- /** {
-       box-sizing: border-box;
-       } */
-
+/* INFO ABOUT THE HEADER IMG */
 #headerPic{
     width: 33%;
     margin-left:200px;
-       }
+}
+
+
+  /* INFO ABOUT THE BUTTONS */
 
  #button {
      /*position:absolute; */
@@ -97,24 +74,57 @@ h1 {
      width:10%;
      margin-bottom:10px; 
      font-size:50px;
-     display:block;
+     display:inline-block;
      text-align:center;
      border: 10px solid #2109a3;
-     margin: 0 auto;
+     /*margin: 0 auto;
      margin-left:auto;
-     margin-right:auto;
+     margin-right:auto; */
      cursor: pointer;
- }      
+    align-content: center;
+ }    
+ 
+ #buttonShuffle {
+    /*position:absolute; */
+    /*left:2400px;  */
+    height:130px;
+    width:10%;
+    margin-bottom:10px; 
+    font-size:50px;
+    display:inline-block;
+    text-align:center;
+    border: 10px solid #2109a3;
+    /*margin: 0 auto;
+    margin-left:auto;
+    margin-right:auto; */
+    cursor: pointer;    
+    align-content: center;
+} 
 
  #button:hover {
     background-color: #051970; 
     color:white;
   }
 
-
-  #div0{
-      order:0;
+  #buttonShuffle:hover {
+    background-color: #051970; 
+    color:white;
   }
+
+
+.buttonsDiv {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+/* INFO ABOUT THE DIV ORDER */
+
+#div0{
+    order:0;
+}
 
   #div1{
     order:1;
@@ -160,3 +170,37 @@ h1 {
 #div11{
     order:11;
 } 
+
+
+
+/* CODES THAT DIDNT WORK */
+/*.containerFlip {
+    display:flex;
+    flex-direction: row-reverse;
+    /*flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    padding-left: 700px;
+    padding-right: 700px;
+    padding-left: 700px;
+    padding-top: 250px; 
+    }
+    
+
+.containerId {
+        display:flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        padding-left: 700px;
+        padding-right: 700px;
+        padding-left: 700px;
+        padding-top: 250px; 
+        }    
+*/
+
+
+ /** {
+       box-sizing: border-box;
+       } */

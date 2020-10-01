@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1> <img src="https://quizfactory.com/simple/got2/desktop/top.jpg" id="headerPic"></h1>
+    <div id ="matchFound" class="displayNone">
+        <div> A MATCH HAS BEEN MADE</div>
+    </div>
     <div class="container"> 
         <div class="square"  id="div0"> 0<img src="https://upload.wikimedia.org/wikipedia/en/e/ef/Khal_Drogo-Jason_Momoa.jpg" id="drogo0" style="display: none"/></div>
         <div class="square"  id="div1"> 1<img src="https://upload.wikimedia.org/wikipedia/en/3/30/Jon_Snow_Season_8.png" id="snow1" style="display:none"> </div>
@@ -23,8 +26,11 @@
         <div class="square"  id="div10"> 10<img src="https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2019/04/02/arya.jpg" id="arya10" style="display:none"> </div>
         <div class="square"  id="div11">11 <img src="https://i.pinimg.com/originals/0b/fe/c7/0bfec7bf4fa19fce8e66001ad072146e.jpg" id="cersei11" style="display:none"> </div>
     </div>
-    <button type="button" id="button" onClick="reStart()"> Restart Game</button>
-    <button type="button" id="buttonShuffle" > Shuffle Cards</button>
+    <div class="buttonsDiv">
+        <button type="button" id="button" onClick="reStart()"> Restart Game</button>
+        <button type="button" id="buttonShuffle" > Shuffle Cards</button>
+     </div>
+
     <script src="app.js"></script>
 </body>
 </html>
