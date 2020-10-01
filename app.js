@@ -1,8 +1,10 @@
 console.log("hi");
 
 //GLOBAL VARIABLES
-
+let container =document.getElementsByClassName("container")
+let containerFlip =document.getElementsByClassName(".containerFlip")
 let squares = document.querySelectorAll(".square");
+let containerId = document.getElementById(".containerId")
 let arrMatch = [];
 let arrMatch2= [];
 let snowArr =[];
@@ -15,6 +17,8 @@ let tyrionArr =[]
 let tyrionArr2=[]
 let aryaArr =[]
 let aryaArr2=[]
+let winningA = []
+
 
 let div0 = document.getElementById("div0");
 let div1 = document.getElementById("div1");
@@ -49,15 +53,11 @@ let makeItDifferentCersei= document.createElement("p")
 let makeItDifferentTyrion= document.createElement("p")
 let makeItDifferentArya= document.createElement("p")
 
-//function for drogo match
 
-// if(divId) if classlist[1] is the same but is not gimme alert radding event listener only once. how to temp remove event listener as soon as the div is clicked. if not match put the evvent back on.
-
+let shuffleButton = document.getElementById("buttonShuffle")
 
 
-//maybe try doing if arr 1 or 2. because i poushe diffeent numbers into all of them
-
-
+//checking for muktiple matches for game
 const drogoSnow = () => {
   if (arrMatch.length === 1) {
     //cheking for john and drogo
@@ -172,6 +172,8 @@ const checkMatches = () => {
     if (arrMatch[0] === arrMatch[1]) {
       if(arrMatch2[0] !== arrMatch2[1]){
       console.log("win drogo");
+      winningA.push("0")
+      console.log(winningA)
       setTimeout(function () {
         document.getElementById("drogo0").style.display = "block";
       }, 4000);
@@ -183,6 +185,9 @@ const checkMatches = () => {
       }, 2000);
       div0.removeEventListener('click', changeDiv0);
       div2.removeEventListener('click', changeDiv2);
+      setTimeout(function () {
+        winner()
+       }, 3000);
       
       snowArr = [];
       snowArr2= [];
@@ -214,12 +219,15 @@ const checkMatches = () => {
 }
 }
 
+//check matches for jon snow
 const checkMatchesSnow = () => {
   for (let i = 0; i <snowArr.length; i++) {
    drogoSnow()
     if (snowArr[0] === snowArr[1]) {
       if(snowArr2[0] !== snowArr2[1]){
       console.log("win snow");
+      winningA.push("1")
+      console.log(winningA)
       setTimeout(function () {
         document.getElementById("snow1").style.display = "block";
       }, 4000);
@@ -231,6 +239,9 @@ const checkMatchesSnow = () => {
       }, 2000);
       div1.removeEventListener('click', changeDiv1);
       div3.removeEventListener('click', changeDiv3);
+      setTimeout(function () {
+        winner()
+       }, 3000);
       
       snowArr = [];
       snowArr2= [];
@@ -265,12 +276,15 @@ const checkMatchesSnow = () => {
 }
 }
 
+//check matches for kahleesi
 const checkMatchesKahleesi = () => {
   for (let i = 0; i <kahleesiArr.length; i++) {
    drogoSnow()
     if (kahleesiArr[0] === kahleesiArr[1]) {
       if(kahleesiArr2[0] !== kahleesiArr2[1]){
       console.log("win kahleesi");
+      winningA.push("2")
+      console.log(winningA)
       setTimeout(function () {
         document.getElementById("kahleesi4").style.display = "block";
       }, 4000);
@@ -282,6 +296,7 @@ const checkMatchesKahleesi = () => {
       }, 2000);
       div4.removeEventListener('click', changeDiv1);
       div7.removeEventListener('click', changeDiv3);
+        winner()
       
       snowArr = [];
       snowArr2= [];
@@ -316,12 +331,15 @@ const checkMatchesKahleesi = () => {
 }
 }
 
+//check matches for cersei
 const checkMatchesCersei = () => {
   for (let i = 0; i <cerseiArr.length; i++) {
    drogoSnow()
     if (cerseiArr[0] === cerseiArr[1]) {
       if(cerseiArr2[0] !== cerseiArr2[1]){
       console.log("win Cersei");
+      winningA.push("3")
+      console.log(winningA)
       setTimeout(function () {
         document.getElementById("cersei5").style.display = "block";
       }, 4000);
@@ -333,6 +351,9 @@ const checkMatchesCersei = () => {
       }, 2000);
       div5.removeEventListener('click', changeDiv5);
       div11.removeEventListener('click', changeDiv11);
+      setTimeout(function () {
+        winner()
+       }, 3000);
       
       snowArr = [];
       snowArr2= [];
@@ -367,12 +388,15 @@ const checkMatchesCersei = () => {
 }
 }
 
+//check matches for tyrion
 const checkMatchesTyrion = () => {
   for (let i = 0; i <tyrionArr.length; i++) {
    drogoSnow()
     if (tyrionArr[0] === tyrionArr[1]) {
       if(tyrionArr2[0] !== tyrionArr2[1]){
       console.log("win tyrion");
+      winningA.push("4")
+      console.log(winningA)
       setTimeout(function () {
         document.getElementById("tyrion6").style.display = "block";
       }, 4000);
@@ -384,6 +408,9 @@ const checkMatchesTyrion = () => {
       }, 2000);
       div6.removeEventListener('click', changeDiv5);
       div8.removeEventListener('click', changeDiv11);
+      setTimeout(function () {
+        winner()
+       }, 3000);
       
       snowArr = [];
       snowArr2= [];
@@ -418,13 +445,15 @@ const checkMatchesTyrion = () => {
 }
 }
 
-
+//check matches for arya
 const checkMatchesArya = () => {
   for (let i = 0; i <aryaArr.length; i++) {
    drogoSnow()
     if (aryaArr[0] === aryaArr[1]) {
       if(aryaArr2[0] !== aryaArr2[1]){
       console.log("win arya");
+      winningA.push("5")
+      console.log(winningA)
       setTimeout(function () {
         document.getElementById("arya9").style.display = "block";
       }, 4000);
@@ -436,6 +465,14 @@ const checkMatchesArya = () => {
       }, 2000);
       div9.removeEventListener('click', changeDiv9);
       div10.removeEventListener('click', changeDiv10);
+     
+      setTimeout(function () {
+       winner()
+      }, 3000);
+      // setTimeout(function () {
+      //   reStart()
+      //  }, 5000);
+    
       
       snowArr = [];
       snowArr2= [];
@@ -469,8 +506,6 @@ const checkMatchesArya = () => {
   }
 }
 }
-
-
 
 
 //this has info about div0
@@ -747,9 +782,51 @@ let changeDiv11 = (e) => {
 };
 
 
+//how to change it manually 
+//div0.style.order="5"
 
-//put it in the dom
+const shuffle = () => {
+  let availableDivs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  for (let i=0; i<squares.length; i++){
+    const randomNum= Math.floor(Math.random() * availableDivs.length); {
+       availableDivs.splice(randomNum, 1);
+      //randomNum.splice(availableDivs); doesnt work 
+       console.log(randomNum)
+       console.log(availableDivs)
+       console.log(squares[i]) //shows me a random div 
+   //  squares.style.order(randomNum) //doesnt work 
+       const randomNumDiv=  squares[i].style.order=randomNum
+       console.log(randomNumDiv)
+    } 
+ }
+}
 
+//get the loop to remove the splice from the array ! done
+//once that is done, take the generated number and give it to one of the squares aka div
+// random to get me a random Number out th array, splcie it out of index of array . 
+  //while availabe num is > 0
+
+
+//1. loop thru the container
+//2. i want to give each div a diff style.order number in order to do that i need to generate a randomNum
+//3. in order to do it correctly w/out having the divs overlap. make an array with the total amount of divs.
+//4. everytime a randomNum is selected, remove it from the array, this will avoid div overlap
+//5. that random number is the order number??
+
+
+
+
+
+//grab all divs with class of square 
+//divs availavle. splice 
+      //mth floor .math random * 12
+      //lets say it gives me at 5.. lets ay net it gives me 5. 
+
+  // random to get me a random Number out th array, splcie it out of index of array . 
+  //while availabe num is > 0
+      
+
+//dom stuff
 document.addEventListener("DOMContentLoaded", () => {
   div0.addEventListener("click", changeDiv0);
   div1.addEventListener("click", changeDiv1);
@@ -763,6 +840,8 @@ document.addEventListener("DOMContentLoaded", () => {
   div9.addEventListener("click", changeDiv9);
   div10.addEventListener("click", changeDiv10);
   div11.addEventListener("click", changeDiv11);
+  shuffleButton.addEventListener("click", shuffle)
+
 });
 
 
@@ -806,6 +885,147 @@ const reStart = () =>{
   div10.addEventListener("click", changeDiv10);
 }
 
+
+const winner = () => {
+ if (winningA.length>=6) {
+  alert("winner")
+ } 
+};
+
+
+
+  
+
+
+
+// function shuffle() {
+//   let elementsArray = Array.prototype.slice.call(container.getElementsByClassName('square'));
+//     elementsArray.forEach(function(element){
+//     container.removeChild(element);
+//   })
+//   shuffleArray(elementsArray);
+//   elementsArray.forEach(function(element){
+//   container.appendChild(element);
+// })
+// }
+
+// const shuffle =()=> {
+//   let random = []
+//   for (let i=0; i<squares.length; i++){
+//     random.push(squares[i])
+//     console.log(shuffle)
+//   }
+// }
+
+// const makeArray = () => {
+//   makeArray.push(div0)
+// }
+// console.log(makeArray)
+
+
+
+//alll the images inside div, put them in a for loop and assign them to a random div inside the dom
+// let divArrayGenerator =[]
+
+// const shuffle = () => {
+//   for (let i=0; i<container.length; i++) {
+//    container[i] = divArrayGenerator+i
+//      }
+//    }
+//    console.log(shuffle)
+
+
+
+
+
+
+//failed attemps to winning condition
+
+
+// const winner = () => {
+//   if (arrMatch[0] === arrMatch[1]) {
+//     if (arrMatch2[0] !== arrMatch2[1]) {
+//       if (snowArr[0] === snowArr[1]) {
+//         if (snowArr2[0] !== snowArr2[1]) {
+//           if (kahleesiArr[0] === kahleesiArr[1]) {
+//             if (kahleesiArr2[0] !== kahleesiArr2[1]) {
+//               if (cerseiArr[0] === cerseiArr[1]) {
+//                 if (cerseiArr2[0] !== cerseiArr2[1]) {
+//                   if (tyrionArr[0] === tyrionArr[1]) {
+//                     if (tyrionArr2[0] !== tyrionArr2[1]) {
+//                       if (aryaArr[0] === aryaArr[1]) {
+//                         if (aryaArr2[0] !== aryaArr2[1]) {
+//                           console.log("game over");
+//                         } else console.log("keep playing");
+//                       }
+//                     }
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// };
+
+
+
+
+
+
+// const winner = () => {
+//   if (
+//     drogo0.style.display === "block" && snow1.style.display === "block" && drogo2.style.display === "block" && snow3.style.display === "block" &&
+//     kahleesi4.style.display === "block" &&
+//     cersei5.style.display === "block" &&
+//     tyrion6.style.display === "block" &&
+//     kahleesi7.style.display === "block" &&
+//     tyrion8.style.display === "block" &&
+//     arya9.style.display === "block" &&
+//     arya10.style.display === "block" &&
+//     cersei11.style.display === "block"
+//   );
+//   {
+//     alert("you win");
+//   }
+// };
+
+
+
+
+
+
+
+
+// const winner = () => {
+//   if (arrMatch[0] == arrMatch[1] && arrMatch2[0] !== arrMatch2[1] &&
+//     snowArr[0] == snowArr[1] && snowArr2[0] !== snowArr2[1]) { //&&
+//       // kahleesiArr[0] == kahleesiArr[1] && kahleesiArr2[0] !== kahleesiArr2[1] &&//{
+//       //   cerseiArr[0] == cerseiArr[1] && cerseiArr2[0] !== cerseiArr2[1] &&
+//       //     tyrionArr[0] == tyrionArr[1] && tyrionArr2[0] !== tyrionArr2[1] &&
+//       //       aryaArr[0] == aryaArr[1] && aryaArr2[0] !== aryaArr2[1]){
+//                  console.log("game over")
+//    } else {console.log("keep playing")
+//    console.log(arrMatch[0])
+//    }
+//  }
+
+
+// const winner = () => {
+//   if (arrMatch[0] === arrMatch[1] && snowArr[0] === snowArr[1] !== undefined) {
+//       // if (kahleesiArr[0] == kahleesiArr[1] && kahleesiArr2[0] !== kahleesiArr2[1]) //{
+//       //   if (cerseiArr[0] == cerseiArr[1] && cerseiArr2[0] !== cerseiArr2[1]) 
+//       //     if (tyrionArr[0] == tyrionArr[1] && tyrionArr2[0] !== tyrionArr2[1]) 
+//       //       if (aryaArr[0] == aryaArr[1] && aryaArr2[0] !== aryaArr2[1]){
+//                  console.log("game over")
+//                  console.log(arrMatch[0])
+//    } else {console.log("keep playing")
+//   }
+// }
+                    
+                  
 // set images to have same class. and then do a function with a conditional. if these two divs have the same class. then change the image style to block;
 
 //https://sf.co.ua/13/06/wallpaper-2845886.jpgb  house stark
@@ -816,6 +1036,18 @@ const reStart = () =>{
 
 // https://airwallpaper.com/wp-content/uploads/images2/celebrities-game-thrones-emilia-clarke-background.jpg    danny
 
+
+
+
+//trying to make an array of divs
+
+
+// const makeDivArray = () => {
+//   let divArray =[]
+//   divArray.push(<div></div>)
+
+
+// }
 
 
 

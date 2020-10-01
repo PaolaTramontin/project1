@@ -1,29 +1,59 @@
-.square {
-    background-color:rgb(0, 0, 0);
-    border:10px solid gray;
-    display:inline-block;
-    width:500px;
-    height:650px;
-    outline-style: 5px solid red;
-    outline-style: solid;
-    margin:auto;
-    border-top: 20px solid rgba(7, 99, 204, 0.555) !important;
-    cursor: pointer;
-}
 
 .square:hover {
     background-color:rgb(9, 29, 119);
 }
-.container {
-    display:grid;
-    grid-template-columns: repeat(3,auto);
-    margin-right:1400px;
-    margin-left:1600px;
-    margin-bottom:50px;
-    margin-top:1px;
-    position:flex;
-    
+
+
+
+.square {
+    height:900px;
+    width:700px;
+    border:10px solid white;
+    font-size:150px;
+    background-color:rgba(00,00,00, .6);
+    color:white;
 }
+
+
+.container {
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-content: center;
+padding-left: 700px;
+padding-right: 700px;
+padding-left: 700px;
+padding-top: 250px;
+}
+
+
+/*.containerFlip {
+    display:flex;
+    flex-direction: row-reverse;
+    /*flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    padding-left: 700px;
+    padding-right: 700px;
+    padding-left: 700px;
+    padding-top: 250px; 
+    }
+    
+
+.containerId {
+        display:flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        padding-left: 700px;
+        padding-right: 700px;
+        padding-left: 700px;
+        padding-top: 250px; 
+        }    
+*/
+
 
 p{
     font-size:0px;
@@ -37,11 +67,6 @@ body {
     background-attachment: fixed;
     background-size: 100% 100%;
 } 
-.square:first-child,
-.square:nth-child(2),
-.square:nth-child(3){
-    border-top: none;
-}
 
 
 img{
@@ -74,7 +99,7 @@ h1 {
      font-size:50px;
      display:block;
      text-align:center;
-     border: 5px solid #2109a3;
+     border: 10px solid #2109a3;
      margin: 0 auto;
      margin-left:auto;
      margin-right:auto;
@@ -85,3 +110,53 @@ h1 {
     background-color: #051970; 
     color:white;
   }
+
+
+  #div0{
+      order:0;
+  }
+
+  #div1{
+    order:1;
+}
+
+#div2{
+    order:2;
+}
+
+#div3{
+    order:3;
+}
+
+#div4{
+    order:4;
+}
+
+#div5{
+    order:5;
+}
+
+#div6{
+    order:6;
+}
+
+#div7{
+    order:7;
+}
+
+#div8{
+    order:8;
+}
+
+#div9{
+    order:9;
+}
+
+#div10{
+    order:10;
+}
+*/
+
+#div11{
+    order:11;
+} 
