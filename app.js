@@ -2,9 +2,10 @@ console.log("hi");
 
 //GLOBAL VARIABLES
 let container =document.getElementsByClassName("container")
-let containerFlip =document.getElementsByClassName(".containerFlip")
 let squares = document.querySelectorAll(".square");
-let containerId = document.getElementById(".containerId")
+let score= document.getElementById("score")
+
+
 let arrMatch = [];
 let arrMatch2= [];
 let snowArr =[];
@@ -18,6 +19,12 @@ let tyrionArr2=[]
 let aryaArr =[]
 let aryaArr2=[]
 let winningA = []
+let scoreSum = 0;
+
+
+  console.log(scoreSum)
+  score.innerHTML=`${scoreSum}`
+
 
 
 let div0 = document.getElementById("div0");
@@ -174,6 +181,9 @@ const checkMatches = () => {
       console.log("win drogo");
       winningA.push("0")
       console.log(winningA)
+      scoreSum++
+      score.innerHTML=`${scoreSum}`
+      console.log(scoreSum)
       setTimeout(function () {
         document.getElementById("drogo0").style.display = "block";
       }, 4000);
@@ -181,8 +191,11 @@ const checkMatches = () => {
         document.getElementById("drogo2").style.display = "block";
       }, 4000);
       setTimeout(function () {
-        alert("Good Job! Match found. Moon of my life... ");
+        document.getElementById("matchFound").style.display="block";;
       }, 2000);
+      setTimeout(function () {
+        document.getElementById("matchFound").style.display="none";;
+      }, 3000);
       div0.removeEventListener('click', changeDiv0);
       div2.removeEventListener('click', changeDiv2);
       setTimeout(function () {
@@ -228,6 +241,7 @@ const checkMatchesSnow = () => {
       console.log("win snow");
       winningA.push("1")
       console.log(winningA)
+      scoreSum = scoreSum+1
       setTimeout(function () {
         document.getElementById("snow1").style.display = "block";
       }, 4000);
@@ -235,8 +249,11 @@ const checkMatchesSnow = () => {
         document.getElementById("snow3").style.display = "block";
       }, 4000);
       setTimeout(function () {
-        alert("Good Job! here is a popular Jon Snow quote: They Were The Shields That Guarded The Realms Of Men.");
+        document.getElementById("matchFound").style.display="block";;
       }, 2000);
+      setTimeout(function () {
+        document.getElementById("matchFound").style.display="none";;
+      }, 3000);
       div1.removeEventListener('click', changeDiv1);
       div3.removeEventListener('click', changeDiv3);
       setTimeout(function () {
@@ -285,6 +302,9 @@ const checkMatchesKahleesi = () => {
       console.log("win kahleesi");
       winningA.push("2")
       console.log(winningA)
+      scoreSum++
+      score.innerHTML=`${scoreSum}`
+      console.log(scoreSum)
       setTimeout(function () {
         document.getElementById("kahleesi4").style.display = "block";
       }, 4000);
@@ -292,8 +312,11 @@ const checkMatchesKahleesi = () => {
         document.getElementById("kahleesi7").style.display = "block";
       }, 4000);
       setTimeout(function () {
-        alert("Dracarys! a Match has been made.");
+        document.getElementById("matchFound").style.display="block";;
       }, 2000);
+      setTimeout(function () {
+        document.getElementById("matchFound").style.display="none";;
+      }, 3000);
       div4.removeEventListener('click', changeDiv1);
       div7.removeEventListener('click', changeDiv3);
         winner()
@@ -340,6 +363,9 @@ const checkMatchesCersei = () => {
       console.log("win Cersei");
       winningA.push("3")
       console.log(winningA)
+      scoreSum++
+      score.innerHTML=`${scoreSum}`
+      console.log(scoreSum)
       setTimeout(function () {
         document.getElementById("cersei5").style.display = "block";
       }, 4000);
@@ -347,8 +373,11 @@ const checkMatchesCersei = () => {
         document.getElementById("cersei11").style.display = "block";
       }, 4000);
       setTimeout(function () {
-        alert("Well Played, You matched Cersei Lannister. Everyone Who Isn't Us Is An Enemy..");
+        document.getElementById("matchFound").style.display="block";;
       }, 2000);
+      setTimeout(function () {
+        document.getElementById("matchFound").style.display="none";;
+      }, 3000);
       div5.removeEventListener('click', changeDiv5);
       div11.removeEventListener('click', changeDiv11);
       setTimeout(function () {
@@ -397,6 +426,9 @@ const checkMatchesTyrion = () => {
       console.log("win tyrion");
       winningA.push("4")
       console.log(winningA)
+      scoreSum++
+      score.innerHTML=`${scoreSum}`
+      console.log(scoreSum)
       setTimeout(function () {
         document.getElementById("tyrion6").style.display = "block";
       }, 4000);
@@ -404,8 +436,11 @@ const checkMatchesTyrion = () => {
         document.getElementById("tyrion8").style.display = "block";
       }, 4000);
       setTimeout(function () {
-        alert("Tyrion Lannister MATCH! .. He drinks and he knows things");
+        document.getElementById("matchFound").style.display="block";;
       }, 2000);
+      setTimeout(function () {
+        document.getElementById("matchFound").style.display="none";;
+      }, 3000);
       div6.removeEventListener('click', changeDiv5);
       div8.removeEventListener('click', changeDiv11);
       setTimeout(function () {
@@ -454,6 +489,9 @@ const checkMatchesArya = () => {
       console.log("win arya");
       winningA.push("5")
       console.log(winningA)
+      scoreSum++
+      score.innerHTML=`${scoreSum}`
+      console.log(scoreSum)
       setTimeout(function () {
         document.getElementById("arya9").style.display = "block";
       }, 4000);
@@ -461,8 +499,11 @@ const checkMatchesArya = () => {
         document.getElementById("arya10").style.display = "block";
       }, 4000);
       setTimeout(function () {
-        alert("Arya Stark.. the girl has no name.");
+        document.getElementById("matchFound").style.display="block";;
       }, 2000);
+      setTimeout(function () {
+        document.getElementById("matchFound").style.display="none";;
+      }, 3000);
       div9.removeEventListener('click', changeDiv9);
       div10.removeEventListener('click', changeDiv10);
      
@@ -506,7 +547,6 @@ const checkMatchesArya = () => {
   }
 }
 }
-
 
 //this has info about div0
 let changeDiv0 = (e) => {
@@ -817,8 +857,6 @@ const shuffle = () => {
 
 
 
-
-
 //grab all divs with class of square 
 //divs availavle. splice 
       //mth floor .math random * 12
@@ -842,8 +880,7 @@ document.addEventListener("DOMContentLoaded", () => {
   div9.addEventListener("click", changeDiv9);
   div10.addEventListener("click", changeDiv10);
   div11.addEventListener("click", changeDiv11);
-  shuffleButton.addEventListener("click", shuffle)
-
+  shuffleButton.addEventListener("click", shuffle);
 });
 
 
@@ -896,9 +933,22 @@ const winner = () => {
  } 
 };
 
+const countdown = () => {
+  var timeleft = 25;
+  var downloadTimer = setInterval(function(){
+    if(timeleft <= 0){
+      clearInterval(downloadTimer);
+      document.getElementById("clock").innerHTML = "Time is Up!";
+      reStart()
+    } else {
+      document.getElementById("clock").innerHTML = timeleft + " seconds remaining";
+    }
+    timeleft -= 1;
+  }, 1000);
+  } 
 
 
-  
+
 
 
 
@@ -1052,6 +1102,15 @@ const winner = () => {
 
 
 // }
+
+
+//TO DO:
+
+// create one div for each modal
+//each modal needs to be set to display none
+//once a match is made target the id of the modal i want to display and
+// style.display="block"
+//or create a class with css and reember to remove the former class 
 
 
 
