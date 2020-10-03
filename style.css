@@ -38,6 +38,81 @@ z-index:1;
 }
 
 
+
+
+#player1Wins{
+
+    background-size: 100% 100%;
+    display: inline-block;
+    align-items: center;
+    padding-top:70px;
+    flex-wrap: wrap;
+    align-content: center;
+    width:1700px;
+    height:999px;
+    margin-top:1600px; 
+    /*background-color:rgba(247, 246, 246, 0.8);*/
+    background-image: url('https://www.maxim.com/.image/t_share/MTQ5MTAwODcxNDc1NTM2OTUx/game-of-thrones.png');
+    margin-bottom: 5px;
+    position:absolute;
+    z-index:1;
+    font-family:Stencil Std, fantasy;
+    color:black;
+    font-size:165px;
+    border:35px solid white;
+
+}
+
+#tieGame{
+
+    background-size: 100% 100%;
+    display: inline-block;
+    align-items: center;
+    padding-top:70px;
+    flex-wrap: wrap;
+    align-content: center;
+    width:1700px;
+    height:999px;
+    margin-top:1600px; 
+    /*background-color:rgba(247, 246, 246, 0.8);*/
+    background-image: url('https://deadline.com/wp-content/uploads/2019/04/courtesy-of-hbo-5-e1556506599408.jpg?w=681&h=383&crop=1');
+    margin-bottom: 5px;
+    position:absolute;
+    z-index:1;
+    font-family:Stencil Std, fantasy;
+    color:black;
+    font-size:165px;
+    border:35px solid white;
+
+}
+
+
+#player2Wins{
+    
+    background-size: 100% 100%;
+    display: inline-block;
+    align-items: center;
+    padding-top:70px;
+    flex-wrap: wrap;
+    align-content: center;
+    width:1700px;
+    height:999px;
+    margin-top:1600px; 
+    /*background-color:rgba(247, 246, 246, 0.8);*/
+    background-image: url('https://goombastomp.com/wp-content/uploads/2019/04/Game-of-Thrones-Soundtrack-Best-Songs.jpg');
+    margin-bottom: 5px;
+    position:absolute;
+    z-index:1;
+    font-family:Stencil Std, fantasy;
+    color:black;
+    font-size:165px;
+    border:35px solid gray;
+    
+
+}
+
+
+
 #clock{
     display: inline-block;
     justify-content: center;
@@ -182,11 +257,11 @@ header {
 
 /* INFO ABOUT THE HEADER IMG */
 #headerPic{
-    padding-top: 50px;
+    margin-top:50px;
     width: 63%;
     height:10%;
     margin-left:200px;
-    opacity:0.9;
+   /* opacity:0.9; */
 }
 
 
@@ -196,9 +271,9 @@ header {
      /*position:absolute; */
      /*left:2400px;  */
      height:130px;
-     width:30%;
+     width:40%;
      margin-bottom:10px; 
-     font-size:50px;
+     font-size:55px;
      display:inline-block;
      text-align:center;
      border: 18px solid #063b5e;
@@ -216,9 +291,9 @@ header {
     /*position:absolute; */
     /*left:2400px;  */
     height:130px;
-    width:30%;
+    width:40%;
     margin-bottom:10px; 
-    font-size:56px;
+    font-size:60px;
     display:inline-block;
     text-align:center;
     border: 18px solid #063b5e;
@@ -253,6 +328,34 @@ header {
     width:50%;
     margin:5rem 0;
 }
+
+#player1{
+    margin-top:200px;
+    height:200px;
+    width:700px;
+    margin-right: 3200px;
+    position:absolute;
+    font-size:80px;
+    color:white;
+    font-family: Apple Chancery, cursive;
+    background-color:rgba(0, 0, 0, 0.4);
+    border:2px solid gray;
+}
+
+#player2{
+    margin-top:400px;
+    height:200px;
+    width:700px;
+    margin-right: 3200px;
+    position:absolute;
+    font-size:80px;
+    color:white;
+    font-family: Apple Chancery, cursive;
+    background-color:rgba(0, 0, 0, 0.4);
+    border:2px solid gray;
+    
+}
+
 
 /* INFO ABOUT THE DIV ORDER */
 

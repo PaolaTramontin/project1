@@ -6,6 +6,8 @@ let squares = document.querySelectorAll(".square");
 let score= document.getElementById("score")
 
 
+
+
 let arrMatch = [];
 let arrMatch2= [];
 let snowArr =[];
@@ -19,8 +21,12 @@ let tyrionArr2=[]
 let aryaArr =[]
 let aryaArr2=[]
 let winningA = []
+let whoWins = [];
 let scoreSum = 0;
+let scoreSum2=0;
 
+let finalArray = []
+let finalArray2= []
 
   console.log(scoreSum)
   score.innerHTML=`${scoreSum}`
@@ -180,6 +186,8 @@ const checkMatches = () => {
       if(arrMatch2[0] !== arrMatch2[1]){
       console.log("win drogo");
       winningA.push("0")
+      whoWins.push("Match")
+      console.log(whoWins);
       console.log(winningA)
       scoreSum++
       score.innerHTML=`${scoreSum}`
@@ -240,8 +248,11 @@ const checkMatchesSnow = () => {
       if(snowArr2[0] !== snowArr2[1]){
       console.log("win snow");
       winningA.push("1")
+      whoWins.push("Match")
+      console.log(whoWins)
       console.log(winningA)
-      scoreSum = scoreSum+1
+      scoreSum++
+      score.innerHTML=`${scoreSum}`
       setTimeout(function () {
         document.getElementById("snow1").style.display = "block";
       }, 4000);
@@ -302,6 +313,7 @@ const checkMatchesKahleesi = () => {
       console.log("win kahleesi");
       winningA.push("2")
       console.log(winningA)
+      whoWins.push("Match")
       scoreSum++
       score.innerHTML=`${scoreSum}`
       console.log(scoreSum)
@@ -363,6 +375,7 @@ const checkMatchesCersei = () => {
       console.log("win Cersei");
       winningA.push("3")
       console.log(winningA)
+      whoWins.push("Match")
       scoreSum++
       score.innerHTML=`${scoreSum}`
       console.log(scoreSum)
@@ -426,6 +439,7 @@ const checkMatchesTyrion = () => {
       console.log("win tyrion");
       winningA.push("4")
       console.log(winningA)
+      whoWins.push("Match")
       scoreSum++
       score.innerHTML=`${scoreSum}`
       console.log(scoreSum)
@@ -489,6 +503,7 @@ const checkMatchesArya = () => {
       console.log("win arya");
       winningA.push("5")
       console.log(winningA)
+      whoWins.push("Match")
       scoreSum++
       score.innerHTML=`${scoreSum}`
       console.log(scoreSum)
@@ -822,70 +837,143 @@ let changeDiv11 = (e) => {
 };
 
 
+
+
+const reStart = () =>{  //resets the game. all the scores and arrays are reset
+  document.getElementById("clock").disabled = false; 
+  //document.getElementById("clock").disabled = false;
+  //resetting drogo
+   document.getElementById("drogo0").style.display = "none";
+   document.getElementById("drogo2").style.display = "none";
+   div0.addEventListener("click", changeDiv0);
+   div2.addEventListener("click", changeDiv2);
+ 
+   //resetting jon snow
+   document.getElementById("snow1").style.display = "none";
+   document.getElementById("snow3").style.display = "none";
+   div1.addEventListener("click", changeDiv1);
+   div3.addEventListener("click", changeDiv3);
+ 
+   //resetting kahleesi
+ 
+   document.getElementById("kahleesi4").style.display = "none";
+   document.getElementById("kahleesi7").style.display = "none";
+   div4.addEventListener("click", changeDiv4);
+   div7.addEventListener("click", changeDiv7);
+ 
+   //resetting cersei
+   document.getElementById("cersei11").style.display = "none";
+   document.getElementById("cersei5").style.display = "none";
+   div5.addEventListener("click", changeDiv5);
+   div11.addEventListener("click", changeDiv11)
+ 
+ 
+   //resetting tyrion
+   document.getElementById("tyrion6").style.display = "none";
+   document.getElementById("tyrion8").style.display = "none";
+   div6.addEventListener("click", changeDiv6);
+   div8.addEventListener("click", changeDiv8);
+ 
+   //resetting Arya
+   document.getElementById("arya9").style.display = "none";
+   document.getElementById("arya10").style.display = "none";
+   div9.addEventListener("click", changeDiv9);
+   div10.addEventListener("click", changeDiv10);
+ 
+   shuffle2()  //shuffle the cards again for new game
+
+   
+//reset the score board
+  scoreSum = 0
+  score.innerHTML= 0 
+  //reset player stats
+  player2.innerHTML= "Player 2"
+  player1.innerHTML= "Player 1"
+  //hide the pop up winner images
+  document.getElementById("player1Wins").style.display="none";;
+  document.getElementById("player2Wins").style.display="none";;
+  document.getElementById("tieGame").style.display="none";
+
+  //reset all the arrays 
+  arrMatch = [];
+  arrMatch2= [];
+  snowArr =[];
+  snowArr2 =[];
+  kahleesiArr =[]
+  kahleesiArr2 =[]
+  cerseiArr=[]
+  cerseiArr2 =[]
+  tyrionArr =[]
+  tyrionArr2=[]
+  aryaArr =[]
+  aryaArr2=[]
+  winningA = []
+  whoWins = [];
+  scoreSum = 0;
+  scoreSum2=0;
+  finalArray = []
+  finalArray2= []
+ }
+
+
+ const start1Player = () => {
+   reStart()  //reset everythhing from previous games including arrays
+   document.getElementById("clock").disabled = true;   //disable the 2 player mode  so no 2 games at once
+   //push the score into the screen. should already do that once a match happens
+
+
+  //  var timeleft = 15;//give p2 15 sec timer 
+  // var downloadTimer = setInterval(function(){
+  //   if(timeleft <= 0){
+  //     clearInterval(downloadTimer);
+  //     document.getElementById("clock").innerHTML = "Time is Up!";
+   
+   
+   //enable the 2 player button
+   //will have to reset the single player stats at game end
+ }
+
 //how to change it manually 
 //div0.style.order="5"
 
-const shuffle = () => {
-  let availableDivs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-  for (let i=0; i<squares.length; i++){
-    const randomNum= Math.floor(Math.random() * availableDivs.length); {
-       availableDivs.splice(randomNum, 1);
-      //randomNum.splice(availableDivs); doesnt work 
-       console.log(randomNum)
-       console.log(availableDivs)
-       console.log(squares[i]) //shows me a random div 
-   //  squares.style.order(randomNum) //doesnt work 
-       const randomNumDiv=  squares[i].style.order=randomNum
-       console.log(randomNumDiv)
-    } 
- }
+const shuffle = () => {  //this shuffle will erase the players scores and divs from the screen. this is also he function for the button on the screen. so make sure it resets everything
+  reStart()
+  document.getElementById("clock").disabled = false; 
+
 }
 
 
-//fatima notes and tips 
-//get the loop to remove the splice from the array ! done
-//once that is done, take the generated number and give it to one of the squares aka div
-// random to get me a random Number out th array, splcie it out of index of array . 
-  //while availabe num is > 0
+ const shuffle2 = () => { //this shuffle wont reset p1 status.
+ 
+  
+    let availableDivs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    for (let i=0; i<squares.length; i++){
+      const randomNum= Math.floor(Math.random() * availableDivs.length); {
+         availableDivs.splice(randomNum, 1);
+        //randomNum.splice(availableDivs); doesnt work 
+         console.log(randomNum)
+         console.log(availableDivs)
+         console.log(squares[i]) //shows me a random div 
+     //  squares.style.order(randomNum) //doesnt work 
+         const randomNumDiv=  squares[i].style.order=randomNum
+         console.log(randomNumDiv)
+      } 
+   }
+  }
 
 
-//1. loop thru the container
-//2. i want to give each div a diff style.order number in order to do that i need to generate a randomNum
-//3. in order to do it correctly w/out having the divs overlap. make an array with the total amount of divs.
-//4. everytime a randomNum is selected, remove it from the array, this will avoid div overlap
-//5. that random number is the order number??
+const winner = () => {
+ if (winningA.length>=6) {
+  alert("winner")
+  
+ } 
+};
 
+const countdown2 = () => {  //timeout for player 2 and has the winner logic
+  winningA = []
 
+  //reset the divs for p2
 
-//grab all divs with class of square 
-//divs availavle. splice 
-      //mth floor .math random * 12
-      //lets say it gives me at 5.. lets ay net it gives me 5. 
-
-  // random to get me a random Number out th array, splcie it out of index of array . 
-  //while availabe num is > 0
-      
-
-//dom stuff
-document.addEventListener("DOMContentLoaded", () => {
-  div0.addEventListener("click", changeDiv0);
-  div1.addEventListener("click", changeDiv1);
-  div2.addEventListener("click", changeDiv2);
-  div3.addEventListener("click", changeDiv3);
-  div4.addEventListener("click", changeDiv4);
-  div5.addEventListener("click", changeDiv5);
-  div6.addEventListener("click", changeDiv6);
-  div7.addEventListener("click", changeDiv7);
-  div8.addEventListener("click", changeDiv8);
-  div9.addEventListener("click", changeDiv9);
-  div10.addEventListener("click", changeDiv10);
-  div11.addEventListener("click", changeDiv11);
-  shuffleButton.addEventListener("click", shuffle);
-});
-
-
-const reStart = () =>{
- //resetting drogo
   document.getElementById("drogo0").style.display = "none";
   document.getElementById("drogo2").style.display = "none";
   div0.addEventListener("click", changeDiv0);
@@ -923,23 +1011,95 @@ const reStart = () =>{
   div9.addEventListener("click", changeDiv9);
   div10.addEventListener("click", changeDiv10);
 
-  shuffle()
-}
+// you need to reshuffle the cards without setting the p1 status 
 
+shuffle2()   //this shuffle wont reset p1 score on the div 
 
-const winner = () => {
- if (winningA.length>=6) {
-  alert("winner")
- } 
-};
+  //reset score
+  score.innerHTML=0   //resets the score on the screen for P2
 
-const countdown = () => {
-  var timeleft = 25;
+  var timeleft = 15;//give p2 15 sec timer 
   var downloadTimer = setInterval(function(){
     if(timeleft <= 0){
       clearInterval(downloadTimer);
       document.getElementById("clock").innerHTML = "Time is Up!";
-      reStart()
+    let player2= document.getElementById("player2") 
+    player2.innerHTML= "Player2 Score: " + `${scoreSum}`  //show P2 score on the div
+    finalArray2.push(scoreSum) //push p2 score into an array to find winner
+    console.log(finalArray2)  // show me that the array worked
+
+    //if the game is a tie
+      if (finalArray2[0]===finalArray2[1]){
+        setTimeout(function () {
+          document.getElementById("tieGame").style.display="block";;  //show the tie image after 2 secs
+        }, 2000);
+        setTimeout(function () {
+        document.getElementById("clock").innerHTML = "New Game";   //change the wording on the button after 4 secs
+       }, 4000);
+       setTimeout(function () { reStart() }, 6000); // have a way to restart the game afte 6 secs
+      }
+
+      //if player 1 wins
+      if (finalArray2[0]>finalArray2[1]){
+        setTimeout(function () {
+          document.getElementById("player1Wins").style.display="block";; //show p1 winner image after 2 secs
+        }, 2000);
+        setTimeout(function () {
+        document.getElementById("clock").innerHTML = "New Game";   //change the wording on the button after 4 secs
+     }, 4000);
+     setTimeout(function () { reStart() }, 6000); // have a way to restart the game afte 6 secs
+      }
+
+        //if player 2 wins
+      if (finalArray2[0]<finalArray2[1]){
+        setTimeout(function () {
+          document.getElementById("player2Wins").style.display="block";;  //show p2 winner image after 2 secs
+        }, 2000);
+        setTimeout(function () {
+          document.getElementById("clock").innerHTML = "New Game";  //change the working on the button
+         }, 4000);
+         setTimeout(function () { reStart() }, 6000); // have a way to restart the game afte 6 secs
+      }
+    } else {
+      document.getElementById("clock").innerHTML = timeleft + " seconds remaining";
+    }
+    timeleft -= 1;
+  }, 1000);
+
+ // document.getElementById("clock").disabled = true;
+  }
+
+const addEvents = ()=> { //has all the event listeners. stops it from being clicked
+  div0.addEventListener("click", changeDiv0);
+  div1.addEventListener("click", changeDiv1);
+  div2.addEventListener("click", changeDiv2);
+  div3.addEventListener("click", changeDiv3);
+  div4.addEventListener("click", changeDiv4);
+  div5.addEventListener("click", changeDiv5);
+  div6.addEventListener("click", changeDiv6);
+  div7.addEventListener("click", changeDiv7);
+  div8.addEventListener("click", changeDiv8);
+  div9.addEventListener("click", changeDiv9);
+  div10.addEventListener("click", changeDiv10);
+  div11.addEventListener("click", changeDiv11);
+  shuffleButton.addEventListener("click", shuffle);
+}
+
+const countdown = () => { //timeout for player 1 and pushes the score for p1 to screen
+addEvents()
+
+  var timeleft = 15;   //15 sec timer
+  var downloadTimer = setInterval(function(){
+    if(timeleft <= 0){      //when the timer hits zero 
+      clearInterval(downloadTimer);   //clear the clock
+      document.getElementById("clock").innerHTML = "Time is Up! + Player 2 Go!"; //alert player 2 turn 
+    let player1= document.getElementById("player1") 
+    player1.innerHTML= "Player1 Score: " + `${scoreSum}`   //this will push P1 score to the screen
+    finalArray2.push(scoreSum)  //push p1 score to an array to figure out who won game
+    console.log(finalArray2)  //show me that the array is working
+    scoreSum = 0 //reset score for next turn 
+      countdown2()  //make a new timer for p2
+   //reStart()
     } else {
       document.getElementById("clock").innerHTML = timeleft + " seconds remaining";
     }
@@ -948,7 +1108,121 @@ const countdown = () => {
   } 
 
 
+ //press reset and then start again new game?
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//dom stuff
+// document.addEventListener("DOMContentLoaded", () => {
+//   div0.addEventListener("click", changeDiv0);
+//   div1.addEventListener("click", changeDiv1);
+//   div2.addEventListener("click", changeDiv2);
+//   div3.addEventListener("click", changeDiv3);
+//   div4.addEventListener("click", changeDiv4);
+//   div5.addEventListener("click", changeDiv5);
+//   div6.addEventListener("click", changeDiv6);
+//   div7.addEventListener("click", changeDiv7);
+//   div8.addEventListener("click", changeDiv8);
+//   div9.addEventListener("click", changeDiv9);
+//   div10.addEventListener("click", changeDiv10);
+//   div11.addEventListener("click", changeDiv11);
+//   shuffleButton.addEventListener("click", shuffle);
+// });
+
+
+
+
+
+
+
+
+
+// create an empty div that says player 1, leave it blank. once the timer runs out 
+//push the game score innerhtml into that div.
+//reStart() and 
+//create a second empty div saying player 2, leave it blank. once they have their turn.
+//psh the score into that div
+//do  a function that compares the 2
+//alert winner restart() and clear the player 1 and player 2 div
+
+//or every correct match push into an array and into a div,
+//at the end compare array lengths
+
+
+// let whoWon = ()=> {
+//   var player1;
+//   var player2;
+//   player1 = document.getElementById("firstGame").value;
+//   player2 = document.getElementById("secondGame").value;
+//   if (player1 > player2){
+//       alert("player 1 wins");
+//   } if (plater1 = player2){
+//       alert("tie")
+//   } if (player2 > player1){
+//     alert("player 2 wins")
+//   }
+// }
+
+
+
+
+
+// const secondPlayer = () =>{
+//   //resetting drogo
+//    document.getElementById("drogo0").style.display = "none";
+//    document.getElementById("drogo2").style.display = "none";
+//    div0.addEventListener("click", changeDiv0);
+//    div2.addEventListener("click", changeDiv2);
+ 
+//    //resetting jon snow
+//    document.getElementById("snow1").style.display = "none";
+//    document.getElementById("snow3").style.display = "none";
+//    div1.addEventListener("click", changeDiv1);
+//    div3.addEventListener("click", changeDiv3);
+ 
+   //resetting kahleesi
+ 
+  //  document.getElementById("kahleesi4").style.display = "none";
+  //  document.getElementById("kahleesi7").style.display = "none";
+  //  div4.addEventListener("click", changeDiv4);
+  //  div7.addEventListener("click", changeDiv7);
+ 
+  //  //resetting cersei
+  //  document.getElementById("cersei11").style.display = "none";
+  //  document.getElementById("cersei5").style.display = "none";
+  //  div5.addEventListener("click", changeDiv5);
+  //  div11.addEventListener("click", changeDiv11)
+ 
+ 
+   //resetting tyrion
+//    document.getElementById("tyrion6").style.display = "none";
+//    document.getElementById("tyrion8").style.display = "none";
+//    div6.addEventListener("click", changeDiv6);
+//    div8.addEventListener("click", changeDiv8);
+ 
+//    //resetting Arya
+//    document.getElementById("arya9").style.display = "none";
+//    document.getElementById("arya10").style.display = "none";
+//    div9.addEventListener("click", changeDiv9);
+//    div10.addEventListener("click", changeDiv10);
+ 
+//    shuffle()
+//    let player1= document.getElementById("player1") 
+//    player1.innerHTML= "Player1 Score: " + `${scoreSum}`
+//  }
 
 
 
@@ -1112,5 +1386,28 @@ const countdown = () => {
 // style.display="block"
 //or create a class with css and reember to remove the former class 
 
+
+//fatima notes and tips 
+//get the loop to remove the splice from the array ! done
+//once that is done, take the generated number and give it to one of the squares aka div
+// random to get me a random Number out th array, splcie it out of index of array . 
+  //while availabe num is > 0
+
+
+//1. loop thru the container
+//2. i want to give each div a diff style.order number in order to do that i need to generate a randomNum
+//3. in order to do it correctly w/out having the divs overlap. make an array with the total amount of divs.
+//4. everytime a randomNum is selected, remove it from the array, this will avoid div overlap
+//5. that random number is the order number??
+
+
+
+//grab all divs with class of square 
+//divs availavle. splice 
+      //mth floor .math random * 12
+      //lets say it gives me at 5.. lets ay net it gives me 5. 
+
+  // random to get me a random Number out th array, splcie it out of index of array . 
+  //while availabe num is > 0
 
 
