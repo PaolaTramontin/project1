@@ -7,7 +7,7 @@ let score= document.getElementById("score")
 
 
 
-
+//global arrays
 let arrMatch = [];
 let arrMatch2= [];
 let snowArr =[];
@@ -24,7 +24,6 @@ let winningA = []
 let whoWins = [];
 let scoreSum = 0;
 let scoreSum2=0;
-
 let finalArray = []
 let finalArray2= []
 
@@ -32,7 +31,7 @@ let finalArray2= []
   score.innerHTML=`${scoreSum}`
 
 
-
+//global variale divs
 let div0 = document.getElementById("div0");
 let div1 = document.getElementById("div1");
 let div2 = document.getElementById("div2");
@@ -66,19 +65,20 @@ let makeItDifferentCersei= document.createElement("p")
 let makeItDifferentTyrion= document.createElement("p")
 let makeItDifferentArya= document.createElement("p")
 
+//global variable buttons
 
 let shuffleButton = document.getElementById("buttonShuffle")
 
 
-//checking for muktiple matches for game
+
+///////////////  GENERATING GAME MATCHES //////////////
+
+//checking for multiple matches for game
 const drogoSnow = () => {
   if (arrMatch.length === 1) {
     //cheking for john and drogo
     if (snowArr.length === 1) {
-      setTimeout(function () {
-        console.log("no match john and drogo");
-        alert("No Match. Hurry up! winter is Coming!");
-      }, 1000);
+      console.log("no match john and drogo");
       snowArr = [];
       snowArr2 = [];
       arrMatch = [];
@@ -94,10 +94,7 @@ const drogoSnow = () => {
   if (arrMatch.length === 1) {
     //checking for drogo and danny
     if (kahleesiArr.length === 1) {
-      setTimeout(function () {
-        console.log("no match kahleesi and drogo");
-        alert("No Match. Hurry up! winter is Coming!");
-      }, 1000);
+      console.log("no match kahleesi and drogo");
       snowArr = [];
       snowArr2 = [];
       arrMatch = [];
@@ -115,10 +112,7 @@ const drogoSnow = () => {
   if (arrMatch.length === 1) {
     //drogo and cersei
     if (cerseiArr.length === 1) {
-      setTimeout(function () {
-        console.log("no match cersei and drogo");
-        alert("No Match. Hurry up! winter is Coming!");
-      }, 1000);
+      console.log("no match cersei and drogo");
       snowArr = [];
       snowArr2 = [];
       arrMatch = [];
@@ -136,10 +130,7 @@ const drogoSnow = () => {
   if (arrMatch.length === 1) {
     //drogo and arya
     if (aryaArr.length === 1) {
-      setTimeout(function () {
-        console.log("no match arya and drogo");
-        alert("No Match. Hurry up! winter is Coming!");
-      }, 1000);
+      console.log("no match arya and drogo");
       snowArr = [];
       snowArr2 = [];
       arrMatch = [];
@@ -157,10 +148,7 @@ const drogoSnow = () => {
   if (cerseiArr.length === 1) {
     //cersei and kahleesi
     if (kahleesiArr.length === 1) {
-      setTimeout(function () {
-        console.log("no match cersei and kahleesi");
-        alert("No Match. Hurry up! winter is Coming!");
-      }, 1000);
+      console.log("no match cersei and kahleesi");
       snowArr = [];
       snowArr2 = [];
       arrMatch = [];
@@ -173,395 +161,398 @@ const drogoSnow = () => {
       tyrionArr2 = [];
       aryaArr = [];
       aryaArr2 = [];
-}
-}
-}
-
-//longest way possibe to check for matches
-
-const checkMatches = () => {
-  for (let i = 0; i < arrMatch.length; i++) {
-    drogoSnow()
-    if (arrMatch[0] === arrMatch[1]) {
-      if(arrMatch2[0] !== arrMatch2[1]){
-      console.log("win drogo");
-      winningA.push("0")
-      whoWins.push("Match")
-      console.log(whoWins);
-      console.log(winningA)
-      scoreSum++
-      score.innerHTML=`${scoreSum}`
-      console.log(scoreSum)
-      setTimeout(function () {
-        document.getElementById("drogo0").style.display = "block";
-      }, 4000);
-      setTimeout(function () {
-        document.getElementById("drogo2").style.display = "block";
-      }, 4000);
-      setTimeout(function () {
-        document.getElementById("matchFound").style.display="block";;
-      }, 2000);
-      setTimeout(function () {
-        document.getElementById("matchFound").style.display="none";;
-      }, 3000);
-      div0.removeEventListener('click', changeDiv0);
-      div2.removeEventListener('click', changeDiv2);
-      setTimeout(function () {
-        winner()
-       }, 3000);
-      
-      snowArr = [];
-      snowArr2= [];
-      arrMatch = [];
-      arrMatch2 = [];
-      kahleesiArr =[];
-     kahleesiArr2 =[];
-     cerseiArr =[];
-     cerseiArr2 =[];
-     tyrionArr=[];
-     tyrionArr2 =[];
-     aryaArr =[];
-     aryaArr2=[];
-      } else {
-        snowArr = [];
-        snowArr2= [];
-        arrMatch = [];
-        arrMatch2 = [];
-        kahleesiArr =[];
-       kahleesiArr2 =[];
-       cerseiArr =[];
-     cerseiArr2 =[];
-     tyrionArr=[];
-     tyrionArr2 =[];
-     aryaArr =[];
-     aryaArr2=[];
     }
   }
-}
-}
+};
+
+//longest way possibe to check for matches
+const checkMatches = () => {
+  for (let i = 0; i < arrMatch.length; i++) {
+    drogoSnow();
+    if (arrMatch[0] === arrMatch[1]) {
+      if (arrMatch2[0] !== arrMatch2[1]) {
+        console.log("win drogo");
+        winningA.push("0");
+        whoWins.push("Match");
+        console.log(whoWins);
+        console.log(winningA);
+        scoreSum++;
+        score.innerHTML = `${scoreSum}`;
+        console.log(scoreSum);
+        setTimeout(function () {
+          document.getElementById("drogo0").style.display = "block";
+        }, 4000);
+        setTimeout(function () {
+          document.getElementById("drogo2").style.display = "block";
+        }, 4000);
+        setTimeout(function () {
+          document.getElementById("matchFound").style.display = "block";
+        }, 2000);
+        setTimeout(function () {
+          document.getElementById("matchFound").style.display = "none";
+        }, 3000);
+        div0.removeEventListener("click", changeDiv0);
+        div2.removeEventListener("click", changeDiv2);
+        setTimeout(function () {
+          winner();
+        }, 3000);
+
+        snowArr = [];
+        snowArr2 = [];
+        arrMatch = [];
+        arrMatch2 = [];
+        kahleesiArr = [];
+        kahleesiArr2 = [];
+        cerseiArr = [];
+        cerseiArr2 = [];
+        tyrionArr = [];
+        tyrionArr2 = [];
+        aryaArr = [];
+        aryaArr2 = [];
+      } else {
+        snowArr = [];
+        snowArr2 = [];
+        arrMatch = [];
+        arrMatch2 = [];
+        kahleesiArr = [];
+        kahleesiArr2 = [];
+        cerseiArr = [];
+        cerseiArr2 = [];
+        tyrionArr = [];
+        tyrionArr2 = [];
+        aryaArr = [];
+        aryaArr2 = [];
+      }
+    }
+  }
+};
 
 //check matches for jon snow
 const checkMatchesSnow = () => {
-  for (let i = 0; i <snowArr.length; i++) {
-   drogoSnow()
+  for (let i = 0; i < snowArr.length; i++) {
+    drogoSnow();
     if (snowArr[0] === snowArr[1]) {
-      if(snowArr2[0] !== snowArr2[1]){
-      console.log("win snow");
-      winningA.push("1")
-      whoWins.push("Match")
-      console.log(whoWins)
-      console.log(winningA)
-      scoreSum++
-      score.innerHTML=`${scoreSum}`
-      setTimeout(function () {
-        document.getElementById("snow1").style.display = "block";
-      }, 4000);
-      setTimeout(function () {
-        document.getElementById("snow3").style.display = "block";
-      }, 4000);
-      setTimeout(function () {
-        document.getElementById("matchFound").style.display="block";;
-      }, 2000);
-      setTimeout(function () {
-        document.getElementById("matchFound").style.display="none";;
-      }, 3000);
-      div1.removeEventListener('click', changeDiv1);
-      div3.removeEventListener('click', changeDiv3);
-      setTimeout(function () {
-        winner()
-       }, 3000);
-      
-      snowArr = [];
-      snowArr2= [];
-      arrMatch = [];
-      arrMatch2 = [];
-      kahleesiArr =[];
-      kahleesiArr2 =[];
-      cerseiArr =[];
-     cerseiArr2 =[];
-     tyrionArr=[];
-     tyrionArr2 =[];
-     aryaArr =[];
-     aryaArr2=[];
-      } else {
+      if (snowArr2[0] !== snowArr2[1]) {
+        console.log("win snow");
+        winningA.push("1");
+        whoWins.push("Match");
+        console.log(whoWins);
+        console.log(winningA);
+        scoreSum++;
+        score.innerHTML = `${scoreSum}`;
         setTimeout(function () {
-          alert("Try again!");
+          document.getElementById("snow1").style.display = "block";
+        }, 4000);
+        setTimeout(function () {
+          document.getElementById("snow3").style.display = "block";
+        }, 4000);
+        setTimeout(function () {
+          document.getElementById("matchFound").style.display = "block";
         }, 2000);
+        setTimeout(function () {
+          document.getElementById("matchFound").style.display = "none";
+        }, 3000);
+        div1.removeEventListener("click", changeDiv1);
+        div3.removeEventListener("click", changeDiv3);
+        setTimeout(function () {
+          winner();
+        }, 3000);
+
         snowArr = [];
-      snowArr2= [];
-      arrMatch = [];
-      arrMatch2 = [];
-      kahleesiArr =[];
-     kahleesiArr2 =[];
-     cerseiArr =[];
-     cerseiArr2 =[];
-     tyrionArr=[];
-     tyrionArr2 =[];
-     aryaArr =[];
-     aryaArr2=[];
+        snowArr2 = [];
+        arrMatch = [];
+        arrMatch2 = [];
+        kahleesiArr = [];
+        kahleesiArr2 = [];
+        cerseiArr = [];
+        cerseiArr2 = [];
+        tyrionArr = [];
+        tyrionArr2 = [];
+        aryaArr = [];
+        aryaArr2 = [];
+      } else {
+        // setTimeout(function () {
+        //   alert("Try again!");
+        // }, 2000);
+        snowArr = [];
+        snowArr2 = [];
+        arrMatch = [];
+        arrMatch2 = [];
+        kahleesiArr = [];
+        kahleesiArr2 = [];
+        cerseiArr = [];
+        cerseiArr2 = [];
+        tyrionArr = [];
+        tyrionArr2 = [];
+        aryaArr = [];
+        aryaArr2 = [];
+      }
     }
   }
-}
-}
+};
 
 //check matches for kahleesi
 const checkMatchesKahleesi = () => {
-  for (let i = 0; i <kahleesiArr.length; i++) {
-   drogoSnow()
+  for (let i = 0; i < kahleesiArr.length; i++) {
+    drogoSnow();
     if (kahleesiArr[0] === kahleesiArr[1]) {
-      if(kahleesiArr2[0] !== kahleesiArr2[1]){
-      console.log("win kahleesi");
-      winningA.push("2")
-      console.log(winningA)
-      whoWins.push("Match")
-      scoreSum++
-      score.innerHTML=`${scoreSum}`
-      console.log(scoreSum)
-      setTimeout(function () {
-        document.getElementById("kahleesi4").style.display = "block";
-      }, 4000);
-      setTimeout(function () {
-        document.getElementById("kahleesi7").style.display = "block";
-      }, 4000);
-      setTimeout(function () {
-        document.getElementById("matchFound").style.display="block";;
-      }, 2000);
-      setTimeout(function () {
-        document.getElementById("matchFound").style.display="none";;
-      }, 3000);
-      div4.removeEventListener('click', changeDiv1);
-      div7.removeEventListener('click', changeDiv3);
-        winner()
-      
-      snowArr = [];
-      snowArr2= [];
-      arrMatch = [];
-      arrMatch2 = [];
-      kahleesiArr =[];
-     kahleesiArr2 =[];
-     cerseiArr =[];
-     cerseiArr2 =[];
-     tyrionArr=[];
-     tyrionArr2 =[];
-     aryaArr =[];
-     aryaArr2=[];
-      } else {
+      if (kahleesiArr2[0] !== kahleesiArr2[1]) {
+        console.log("win kahleesi");
+        winningA.push("2");
+        console.log(winningA);
+        whoWins.push("Match");
+        scoreSum++;
+        score.innerHTML = `${scoreSum}`;
+        console.log(scoreSum);
         setTimeout(function () {
-          alert("Try again!");
+          document.getElementById("kahleesi4").style.display = "block";
+        }, 4000);
+        setTimeout(function () {
+          document.getElementById("kahleesi7").style.display = "block";
+        }, 4000);
+        setTimeout(function () {
+          document.getElementById("matchFound").style.display = "block";
         }, 2000);
+        setTimeout(function () {
+          document.getElementById("matchFound").style.display = "none";
+        }, 3000);
+        div4.removeEventListener("click", changeDiv1);
+        div7.removeEventListener("click", changeDiv3);
+        winner();
+
         snowArr = [];
         snowArr2 = [];
         arrMatch = [];
         arrMatch2 = [];
-        kahleesiArr =[];
-     kahleesiArr2 =[];
-     cerseiArr =[];
-     cerseiArr2 =[];
-     tyrionArr=[];
-     tyrionArr2 =[];
-     aryaArr =[];
-     aryaArr2=[];
+        kahleesiArr = [];
+        kahleesiArr2 = [];
+        cerseiArr = [];
+        cerseiArr2 = [];
+        tyrionArr = [];
+        tyrionArr2 = [];
+        aryaArr = [];
+        aryaArr2 = [];
+      } else {
+        // setTimeout(function () {
+        //   alert("Try again!");
+        // }, 2000);
+        snowArr = [];
+        snowArr2 = [];
+        arrMatch = [];
+        arrMatch2 = [];
+        kahleesiArr = [];
+        kahleesiArr2 = [];
+        cerseiArr = [];
+        cerseiArr2 = [];
+        tyrionArr = [];
+        tyrionArr2 = [];
+        aryaArr = [];
+        aryaArr2 = [];
+      }
     }
   }
-}
-}
+};
 
 //check matches for cersei
 const checkMatchesCersei = () => {
-  for (let i = 0; i <cerseiArr.length; i++) {
-   drogoSnow()
+  for (let i = 0; i < cerseiArr.length; i++) {
+    drogoSnow();
     if (cerseiArr[0] === cerseiArr[1]) {
-      if(cerseiArr2[0] !== cerseiArr2[1]){
-      console.log("win Cersei");
-      winningA.push("3")
-      console.log(winningA)
-      whoWins.push("Match")
-      scoreSum++
-      score.innerHTML=`${scoreSum}`
-      console.log(scoreSum)
-      setTimeout(function () {
-        document.getElementById("cersei5").style.display = "block";
-      }, 4000);
-      setTimeout(function () {
-        document.getElementById("cersei11").style.display = "block";
-      }, 4000);
-      setTimeout(function () {
-        document.getElementById("matchFound").style.display="block";;
-      }, 2000);
-      setTimeout(function () {
-        document.getElementById("matchFound").style.display="none";;
-      }, 3000);
-      div5.removeEventListener('click', changeDiv5);
-      div11.removeEventListener('click', changeDiv11);
-      setTimeout(function () {
-        winner()
-       }, 3000);
-      
-      snowArr = [];
-      snowArr2= [];
-      arrMatch = [];
-      arrMatch2 = [];
-      kahleesiArr =[];
-     kahleesiArr2 =[];
-     cerseiArr =[];
-     cerseiArr2 =[];
-     tyrionArr=[];
-     tyrionArr2 =[];
-     aryaArr =[];
-     aryaArr2=[];
-      } else {
+      if (cerseiArr2[0] !== cerseiArr2[1]) {
+        console.log("win Cersei");
+        winningA.push("3");
+        console.log(winningA);
+        whoWins.push("Match");
+        scoreSum++;
+        score.innerHTML = `${scoreSum}`;
+        console.log(scoreSum);
         setTimeout(function () {
-          alert("Try again!");
+          document.getElementById("cersei5").style.display = "block";
+        }, 4000);
+        setTimeout(function () {
+          document.getElementById("cersei11").style.display = "block";
+        }, 4000);
+        setTimeout(function () {
+          document.getElementById("matchFound").style.display = "block";
         }, 2000);
+        setTimeout(function () {
+          document.getElementById("matchFound").style.display = "none";
+        }, 3000);
+        div5.removeEventListener("click", changeDiv5);
+        div11.removeEventListener("click", changeDiv11);
+        setTimeout(function () {
+          winner();
+        }, 3000);
+
         snowArr = [];
         snowArr2 = [];
         arrMatch = [];
         arrMatch2 = [];
-        kahleesiArr =[];
-      kahleesiArr2 =[];
-      cerseiArr =[];
-     cerseiArr2 =[];
-     tyrionArr=[];
-     tyrionArr2 =[];
-     aryaArr =[];
-     aryaArr2=[];
+        kahleesiArr = [];
+        kahleesiArr2 = [];
+        cerseiArr = [];
+        cerseiArr2 = [];
+        tyrionArr = [];
+        tyrionArr2 = [];
+        aryaArr = [];
+        aryaArr2 = [];
+      } else {
+        // setTimeout(function () {
+        //   alert("Try again!");
+        // }, 2000);
+        snowArr = [];
+        snowArr2 = [];
+        arrMatch = [];
+        arrMatch2 = [];
+        kahleesiArr = [];
+        kahleesiArr2 = [];
+        cerseiArr = [];
+        cerseiArr2 = [];
+        tyrionArr = [];
+        tyrionArr2 = [];
+        aryaArr = [];
+        aryaArr2 = [];
+      }
     }
   }
-}
-}
+};
 
 //check matches for tyrion
 const checkMatchesTyrion = () => {
-  for (let i = 0; i <tyrionArr.length; i++) {
-   drogoSnow()
+  for (let i = 0; i < tyrionArr.length; i++) {
+    drogoSnow();
     if (tyrionArr[0] === tyrionArr[1]) {
-      if(tyrionArr2[0] !== tyrionArr2[1]){
-      console.log("win tyrion");
-      winningA.push("4")
-      console.log(winningA)
-      whoWins.push("Match")
-      scoreSum++
-      score.innerHTML=`${scoreSum}`
-      console.log(scoreSum)
-      setTimeout(function () {
-        document.getElementById("tyrion6").style.display = "block";
-      }, 4000);
-      setTimeout(function () {
-        document.getElementById("tyrion8").style.display = "block";
-      }, 4000);
-      setTimeout(function () {
-        document.getElementById("matchFound").style.display="block";;
-      }, 2000);
-      setTimeout(function () {
-        document.getElementById("matchFound").style.display="none";;
-      }, 3000);
-      div6.removeEventListener('click', changeDiv5);
-      div8.removeEventListener('click', changeDiv11);
-      setTimeout(function () {
-        winner()
-       }, 3000);
-      
-      snowArr = [];
-      snowArr2= [];
-      arrMatch = [];
-      arrMatch2 = [];
-      kahleesiArr =[];
-     kahleesiArr2 =[];
-     cerseiArr =[]
-     cerseiArr2 =[]
-     tyrionArr=[]
-     tyrionArr2 =[]
-     aryaArr =[];
-     aryaArr2=[];
-      } else {
+      if (tyrionArr2[0] !== tyrionArr2[1]) {
+        console.log("win tyrion");
+        winningA.push("4");
+        console.log(winningA);
+        whoWins.push("Match");
+        scoreSum++;
+        score.innerHTML = `${scoreSum}`;
+        console.log(scoreSum);
         setTimeout(function () {
-          alert("Try again!");
+          document.getElementById("tyrion6").style.display = "block";
+        }, 4000);
+        setTimeout(function () {
+          document.getElementById("tyrion8").style.display = "block";
+        }, 4000);
+        setTimeout(function () {
+          document.getElementById("matchFound").style.display = "block";
         }, 2000);
+        setTimeout(function () {
+          document.getElementById("matchFound").style.display = "none";
+        }, 3000);
+        div6.removeEventListener("click", changeDiv5);
+        div8.removeEventListener("click", changeDiv11);
+        setTimeout(function () {
+          winner();
+        }, 3000);
+
         snowArr = [];
         snowArr2 = [];
         arrMatch = [];
         arrMatch2 = [];
-        kahleesiArr =[];
-      kahleesiArr2 =[];
-      cerseiArr =[]
-     cerseiArr2 =[]
-     tyrionArr=[]
-     tyrionArr2 =[]
-     aryaArr =[];
-     aryaArr2=[];
+        kahleesiArr = [];
+        kahleesiArr2 = [];
+        cerseiArr = [];
+        cerseiArr2 = [];
+        tyrionArr = [];
+        tyrionArr2 = [];
+        aryaArr = [];
+        aryaArr2 = [];
+      } else {
+        // setTimeout(function () {
+        //   alert("Try again!");
+        // }, 2000);
+        snowArr = [];
+        snowArr2 = [];
+        arrMatch = [];
+        arrMatch2 = [];
+        kahleesiArr = [];
+        kahleesiArr2 = [];
+        cerseiArr = [];
+        cerseiArr2 = [];
+        tyrionArr = [];
+        tyrionArr2 = [];
+        aryaArr = [];
+        aryaArr2 = [];
+      }
     }
   }
-}
-}
+};
 
 //check matches for arya
 const checkMatchesArya = () => {
-  for (let i = 0; i <aryaArr.length; i++) {
-   drogoSnow()
+  for (let i = 0; i < aryaArr.length; i++) {
+    drogoSnow();
     if (aryaArr[0] === aryaArr[1]) {
-      if(aryaArr2[0] !== aryaArr2[1]){
-      console.log("win arya");
-      winningA.push("5")
-      console.log(winningA)
-      whoWins.push("Match")
-      scoreSum++
-      score.innerHTML=`${scoreSum}`
-      console.log(scoreSum)
-      setTimeout(function () {
-        document.getElementById("arya9").style.display = "block";
-      }, 4000);
-      setTimeout(function () {
-        document.getElementById("arya10").style.display = "block";
-      }, 4000);
-      setTimeout(function () {
-        document.getElementById("matchFound").style.display="block";;
-      }, 2000);
-      setTimeout(function () {
-        document.getElementById("matchFound").style.display="none";;
-      }, 3000);
-      div9.removeEventListener('click', changeDiv9);
-      div10.removeEventListener('click', changeDiv10);
-     
-      setTimeout(function () {
-       winner()
-      }, 3000);
-      // setTimeout(function () {
-      //   reStart()
-      //  }, 5000);
-    
-      
-      snowArr = [];
-      snowArr2= [];
-      arrMatch = [];
-      arrMatch2 = [];
-      kahleesiArr =[];
-     kahleesiArr2 =[];
-     cerseiArr =[]
-     cerseiArr2 =[]
-     tyrionArr=[]
-     tyrionArr2 =[]
-     aryaArr =[];
-     aryaArr2=[];
-      } else {
+      if (aryaArr2[0] !== aryaArr2[1]) {
+        console.log("win arya");
+        winningA.push("5");
+        console.log(winningA);
+        whoWins.push("Match");
+        scoreSum++;
+        score.innerHTML = `${scoreSum}`;
+        console.log(scoreSum);
         setTimeout(function () {
-          alert("Try again!");
+          document.getElementById("arya9").style.display = "block";
+        }, 4000);
+        setTimeout(function () {
+          document.getElementById("arya10").style.display = "block";
+        }, 4000);
+        setTimeout(function () {
+          document.getElementById("matchFound").style.display = "block";
         }, 2000);
+        setTimeout(function () {
+          document.getElementById("matchFound").style.display = "none";
+        }, 3000);
+        div9.removeEventListener("click", changeDiv9);
+        div10.removeEventListener("click", changeDiv10);
+
+        setTimeout(function () {
+          winner();
+        }, 3000);
+        // setTimeout(function () {
+        //   reStart()
+        //  }, 5000);
+
         snowArr = [];
         snowArr2 = [];
         arrMatch = [];
         arrMatch2 = [];
-        kahleesiArr =[];
-      kahleesiArr2 =[];
-      cerseiArr =[]
-     cerseiArr2 =[]
-     tyrionArr=[]
-     tyrionArr2 =[]
-     aryaArr =[];
-     aryaArr2=[];
+        kahleesiArr = [];
+        kahleesiArr2 = [];
+        cerseiArr = [];
+        cerseiArr2 = [];
+        tyrionArr = [];
+        tyrionArr2 = [];
+        aryaArr = [];
+        aryaArr2 = [];
+      } else {
+        // setTimeout(function () {
+        //   alert("Try again!");
+        // }, 2000);
+        snowArr = [];
+        snowArr2 = [];
+        arrMatch = [];
+        arrMatch2 = [];
+        kahleesiArr = [];
+        kahleesiArr2 = [];
+        cerseiArr = [];
+        cerseiArr2 = [];
+        tyrionArr = [];
+        tyrionArr2 = [];
+        aryaArr = [];
+        aryaArr2 = [];
+      }
     }
   }
-}
-}
+};
+
+
+
+////// THIS IS WHERE THE CODE IS TO MAKE THE IMAGES SHOW UP AND DISSAPEAR ////////
+
 
 //this has info about div0
 let changeDiv0 = (e) => {
@@ -584,7 +575,6 @@ let changeDiv0 = (e) => {
   checkMatches();
 };
 
-
 //this has info about div 1 
 let changeDiv1 = (e) => {
   div1.classList.add("snow");
@@ -605,7 +595,6 @@ let changeDiv1 = (e) => {
   console.log(snowArr2)
   checkMatchesSnow();
 };
-
 
 //this has info about div2
 let changeDiv2 = (e) => {
@@ -637,7 +626,6 @@ let changeDiv2 = (e) => {
   checkMatches();
 };
 
-
 //this has info about div 3
 let changeDiv3 = (e) => {
   div3.classList.add("snow");
@@ -658,7 +646,6 @@ let changeDiv3 = (e) => {
   console.log(snowArr2)
   checkMatchesSnow();
 };
-
 
 //this has info about div 4
 let changeDiv4 = (e) => {
@@ -681,7 +668,6 @@ let changeDiv4 = (e) => {
   checkMatchesKahleesi();
 };
 
-
 //this has info about div 5
 let changeDiv5 = (e) => {
   div5.classList.add("cersei");
@@ -702,8 +688,6 @@ let changeDiv5 = (e) => {
   console.log(cerseiArr2)
   checkMatchesCersei();
 };
-
-
 
 //this has info about div 6 
 let changeDiv6 = (e) => {
@@ -726,7 +710,6 @@ let changeDiv6 = (e) => {
   checkMatchesTyrion();
 };
 
-
 //this has info about div 7
 let changeDiv7 = (e) => {
   div7.classList.add("kahleesi");
@@ -747,7 +730,6 @@ let changeDiv7 = (e) => {
   console.log(kahleesiArr2)
   checkMatchesKahleesi();
 };
-
 
 //this has info about div 8
 let changeDiv8 = (e) => {
@@ -770,9 +752,7 @@ let changeDiv8 = (e) => {
   checkMatchesTyrion();
 };
 
-
 //this has info about div 9
-
 let changeDiv9 = (e) => {
   div9.classList.add("arya");
   makeItDifferentArya.innerText="9"
@@ -794,7 +774,6 @@ let changeDiv9 = (e) => {
 };
 
 // this has info about div 10
-
 let changeDiv10 = (e) => {
   div10.classList.add("arya");
   makeItDifferentArya.innerText="10"
@@ -837,101 +816,103 @@ let changeDiv11 = (e) => {
 };
 
 
+/////// FUNCTIONS FOR GAME LOGIC ///////
 
+const reStart = () => {   //THIS FUNCTION RESETS THE ENTIRE GAME
+  document.getElementById("clock").disabled = false;
 
-const reStart = () =>{  //resets the game. all the scores and arrays are reset
-  document.getElementById("clock").disabled = false; 
-  //document.getElementById("clock").disabled = false;
   //resetting drogo
-   document.getElementById("drogo0").style.display = "none";
-   document.getElementById("drogo2").style.display = "none";
-   div0.addEventListener("click", changeDiv0);
-   div2.addEventListener("click", changeDiv2);
- 
-   //resetting jon snow
-   document.getElementById("snow1").style.display = "none";
-   document.getElementById("snow3").style.display = "none";
-   div1.addEventListener("click", changeDiv1);
-   div3.addEventListener("click", changeDiv3);
- 
-   //resetting kahleesi
- 
-   document.getElementById("kahleesi4").style.display = "none";
-   document.getElementById("kahleesi7").style.display = "none";
-   div4.addEventListener("click", changeDiv4);
-   div7.addEventListener("click", changeDiv7);
- 
-   //resetting cersei
-   document.getElementById("cersei11").style.display = "none";
-   document.getElementById("cersei5").style.display = "none";
-   div5.addEventListener("click", changeDiv5);
-   div11.addEventListener("click", changeDiv11)
- 
- 
-   //resetting tyrion
-   document.getElementById("tyrion6").style.display = "none";
-   document.getElementById("tyrion8").style.display = "none";
-   div6.addEventListener("click", changeDiv6);
-   div8.addEventListener("click", changeDiv8);
- 
-   //resetting Arya
-   document.getElementById("arya9").style.display = "none";
-   document.getElementById("arya10").style.display = "none";
-   div9.addEventListener("click", changeDiv9);
-   div10.addEventListener("click", changeDiv10);
- 
-   shuffle2()  //shuffle the cards again for new game
+  console.log("is this working");
+  document.getElementById("drogo0").style.display = "none";
+  document.getElementById("drogo2").style.display = "none";
+  div0.addEventListener("click", changeDiv0);
+  div2.addEventListener("click", changeDiv2);
 
-   
-//reset the score board
-  scoreSum = 0
-  score.innerHTML= 0 
+  //resetting jon snow
+  document.getElementById("snow1").style.display = "none";
+  document.getElementById("snow3").style.display = "none";
+  div1.addEventListener("click", changeDiv1);
+  div3.addEventListener("click", changeDiv3);
+
+  //resetting kahleesi
+
+  document.getElementById("kahleesi4").style.display = "none";
+  document.getElementById("kahleesi7").style.display = "none";
+  div4.addEventListener("click", changeDiv4);
+  div7.addEventListener("click", changeDiv7);
+
+  //resetting cersei
+  document.getElementById("cersei11").style.display = "none";
+  document.getElementById("cersei5").style.display = "none";
+  div5.addEventListener("click", changeDiv5);
+  div11.addEventListener("click", changeDiv11);
+
+  //resetting tyrion
+  document.getElementById("tyrion6").style.display = "none";
+  document.getElementById("tyrion8").style.display = "none";
+  div6.addEventListener("click", changeDiv6);
+  div8.addEventListener("click", changeDiv8);
+
+  //resetting Arya
+  document.getElementById("arya9").style.display = "none";
+  document.getElementById("arya10").style.display = "none";
+  div9.addEventListener("click", changeDiv9);
+  div10.addEventListener("click", changeDiv10);
+
+  shuffle2(); //shuffle the cards again for new game
+
+  //reset the score board
+  scoreSum = 0;
+  score.innerHTML = 0;
   //reset player stats
-  player2.innerHTML= "Player 2"
-  player1.innerHTML= "Player 1"
+  player2.innerHTML = "Player 2";
+  player1.innerHTML = "Player 1";
   //hide the pop up winner images
-  document.getElementById("player1Wins").style.display="none";;
-  document.getElementById("player2Wins").style.display="none";;
-  document.getElementById("tieGame").style.display="none";
+  document.getElementById("player1Wins").style.display = "none";
+  document.getElementById("player2Wins").style.display = "none";
+  document.getElementById("tieGame").style.display = "none";
+  document.getElementById("allMatchesFound").style.display = "none";
 
-  //reset all the arrays 
+  //reset all the arrays
   arrMatch = [];
-  arrMatch2= [];
-  snowArr =[];
-  snowArr2 =[];
-  kahleesiArr =[]
-  kahleesiArr2 =[]
-  cerseiArr=[]
-  cerseiArr2 =[]
-  tyrionArr =[]
-  tyrionArr2=[]
-  aryaArr =[]
-  aryaArr2=[]
-  winningA = []
+  arrMatch2 = [];
+  snowArr = [];
+  snowArr2 = [];
+  kahleesiArr = [];
+  kahleesiArr2 = [];
+  cerseiArr = [];
+  cerseiArr2 = [];
+  tyrionArr = [];
+  tyrionArr2 = [];
+  aryaArr = [];
+  aryaArr2 = [];
+  winningA = [];
   whoWins = [];
   scoreSum = 0;
-  scoreSum2=0;
-  finalArray = []
-  finalArray2= []
- }
+  scoreSum2 = 0;
+  finalArray = [];
+  finalArray2 = [];
+};
 
+const winner = () => {   //WINNING LOGIC, SINGLE PLAYER
+  if (winningA.length >= 6) {
+    setTimeout(function () {
+      document.getElementById("allMatchesFound").style.display = "block"; //show the single winner image after 2 secs
+    }, 2000);
+    setTimeout(function () {
+      reStart();
+    }, 5000);
+  }
+  document.getElementById("clock").disabled = false;
+};
 
- const start1Player = () => {
-   reStart()  //reset everythhing from previous games including arrays
-   document.getElementById("clock").disabled = true;   //disable the 2 player mode  so no 2 games at once
-   //push the score into the screen. should already do that once a match happens
+const start1Player = () => {
+  reStart(); //reset everythhing from previous games including arrays
+  document.getElementById("clock").disabled = true; //disable the 2 player mode  so no 2 games at once
+  //push the score into the screen. should already do that once a match happens
+  shuffleButton.addEventListener("click", reStart);
+};
 
-
-  //  var timeleft = 15;//give p2 15 sec timer 
-  // var downloadTimer = setInterval(function(){
-  //   if(timeleft <= 0){
-  //     clearInterval(downloadTimer);
-  //     document.getElementById("clock").innerHTML = "Time is Up!";
-   
-   
-   //enable the 2 player button
-   //will have to reset the single player stats at game end
- }
 
 //how to change it manually 
 //div0.style.order="5"
@@ -939,41 +920,29 @@ const reStart = () =>{  //resets the game. all the scores and arrays are reset
 const shuffle = () => {  //this shuffle will erase the players scores and divs from the screen. this is also he function for the button on the screen. so make sure it resets everything
   reStart()
   document.getElementById("clock").disabled = false; 
-
 }
 
-
- const shuffle2 = () => { //this shuffle wont reset p1 status.
- 
-  
-    let availableDivs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-    for (let i=0; i<squares.length; i++){
-      const randomNum= Math.floor(Math.random() * availableDivs.length); {
-         availableDivs.splice(randomNum, 1);
-        //randomNum.splice(availableDivs); doesnt work 
-         console.log(randomNum)
-         console.log(availableDivs)
-         console.log(squares[i]) //shows me a random div 
-     //  squares.style.order(randomNum) //doesnt work 
-         const randomNumDiv=  squares[i].style.order=randomNum
-         console.log(randomNumDiv)
-      } 
-   }
+const shuffle2 = () => {
+  //this shuffle wont reset p1 status.
+  let availableDivs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+  for (let i = 0; i < squares.length; i++) {
+    const randomNum = Math.floor(Math.random() * availableDivs.length);
+    {
+      availableDivs.splice(randomNum, 1);
+      //randomNum.splice(availableDivs); doesnt work
+      console.log(randomNum);
+      console.log(availableDivs);
+      console.log(squares[i]); //shows me a random div
+      //  squares.style.order(randomNum) //doesnt work
+      const randomNumDiv = (squares[i].style.order = randomNum);
+      console.log(randomNumDiv);
+    }
   }
-
-
-const winner = () => {
- if (winningA.length>=6) {
-  alert("winner")
-  
- } 
 };
 
 const countdown2 = () => {  //timeout for player 2 and has the winner logic
   winningA = []
-
   //reset the divs for p2
-
   document.getElementById("drogo0").style.display = "none";
   document.getElementById("drogo2").style.display = "none";
   div0.addEventListener("click", changeDiv0);
@@ -998,7 +967,6 @@ const countdown2 = () => {  //timeout for player 2 and has the winner logic
   div5.addEventListener("click", changeDiv5);
   div11.addEventListener("click", changeDiv11)
 
-
   //resetting tyrion
   document.getElementById("tyrion6").style.display = "none";
   document.getElementById("tyrion8").style.display = "none";
@@ -1013,20 +981,28 @@ const countdown2 = () => {  //timeout for player 2 and has the winner logic
 
 // you need to reshuffle the cards without setting the p1 status 
 
-shuffle2()   //this shuffle wont reset p1 score on the div 
+  shuffle2()   //this shuffle wont reset p1 score on the div 
 
   //reset score
   score.innerHTML=0   //resets the score on the screen for P2
-
-  var timeleft = 15;//give p2 15 sec timer 
+  var timeleft = 15; //give p2 15 sec timer 
   var downloadTimer = setInterval(function(){
+
+    const stopIt = ()=> {    //stop timer func in case player presses reset
+      clearInterval(downloadTimer);
+      document.getElementById("clock").innerHTML = "Start 2 Player Game (Timed)" //reset button text
+      reStart() //restart game 
+    }
+
+    shuffleButton.addEventListener("click", stopIt); 
+
     if(timeleft <= 0){
       clearInterval(downloadTimer);
       document.getElementById("clock").innerHTML = "Time is Up!";
-    let player2= document.getElementById("player2") 
-    player2.innerHTML= "Player2 Score: " + `${scoreSum}`  //show P2 score on the div
-    finalArray2.push(scoreSum) //push p2 score into an array to find winner
-    console.log(finalArray2)  // show me that the array worked
+      let player2= document.getElementById("player2") 
+      player2.innerHTML= "Player2 Score: " + `${scoreSum}`  //show P2 score on the div
+      finalArray2.push(scoreSum) //push p2 score into an array to find winner
+      console.log(finalArray2)  // show me that the array worked
 
     //if the game is a tie
       if (finalArray2[0]===finalArray2[1]){
@@ -1034,9 +1010,9 @@ shuffle2()   //this shuffle wont reset p1 score on the div
           document.getElementById("tieGame").style.display="block";;  //show the tie image after 2 secs
         }, 2000);
         setTimeout(function () {
-        document.getElementById("clock").innerHTML = "New Game";   //change the wording on the button after 4 secs
-       }, 4000);
-       setTimeout(function () { reStart() }, 6000); // have a way to restart the game afte 6 secs
+          document.getElementById("clock").innerHTML = "Start 2 Player Game (Timed)";   //change the wording on the button after 4 secs
+        }, 4000);
+        setTimeout(function () { reStart() }, 6000); // have a way to restart the game afte 6 secs
       }
 
       //if player 1 wins
@@ -1045,9 +1021,9 @@ shuffle2()   //this shuffle wont reset p1 score on the div
           document.getElementById("player1Wins").style.display="block";; //show p1 winner image after 2 secs
         }, 2000);
         setTimeout(function () {
-        document.getElementById("clock").innerHTML = "New Game";   //change the wording on the button after 4 secs
-     }, 4000);
-     setTimeout(function () { reStart() }, 6000); // have a way to restart the game afte 6 secs
+          document.getElementById("clock").innerHTML = "Start 2 Player Game (Timed)";   //change the wording on the button after 4 secs
+        }, 4000);
+        setTimeout(function () { reStart() }, 6000); // have a way to restart the game afte 6 secs
       }
 
         //if player 2 wins
@@ -1056,18 +1032,17 @@ shuffle2()   //this shuffle wont reset p1 score on the div
           document.getElementById("player2Wins").style.display="block";;  //show p2 winner image after 2 secs
         }, 2000);
         setTimeout(function () {
-          document.getElementById("clock").innerHTML = "New Game";  //change the working on the button
+          document.getElementById("clock").innerHTML = "Start 2 Player Game (Timed)";  //change the working on the button
          }, 4000);
          setTimeout(function () { reStart() }, 6000); // have a way to restart the game afte 6 secs
       }
     } else {
-      document.getElementById("clock").innerHTML = timeleft + " seconds remaining";
+        document.getElementById("clock").innerHTML = timeleft + " seconds remaining";
+        winningA = []
     }
     timeleft -= 1;
   }, 1000);
-
- // document.getElementById("clock").disabled = true;
-  }
+}
 
 const addEvents = ()=> { //has all the event listeners. stops it from being clicked
   div0.addEventListener("click", changeDiv0);
@@ -1085,45 +1060,51 @@ const addEvents = ()=> { //has all the event listeners. stops it from being clic
   shuffleButton.addEventListener("click", shuffle);
 }
 
-const countdown = () => { //timeout for player 1 and pushes the score for p1 to screen
-addEvents()
+const countdown = () => {
+  //timeout for player 1 and pushes the score for p1 to screen
+  addEvents();
 
-  var timeleft = 15;   //15 sec timer
-  var downloadTimer = setInterval(function(){
-    if(timeleft <= 0){      //when the timer hits zero 
-      clearInterval(downloadTimer);   //clear the clock
-      document.getElementById("clock").innerHTML = "Time is Up! + Player 2 Go!"; //alert player 2 turn 
-    let player1= document.getElementById("player1") 
-    player1.innerHTML= "Player1 Score: " + `${scoreSum}`   //this will push P1 score to the screen
-    finalArray2.push(scoreSum)  //push p1 score to an array to figure out who won game
-    console.log(finalArray2)  //show me that the array is working
-    scoreSum = 0 //reset score for next turn 
-      countdown2()  //make a new timer for p2
-   //reStart()
+  var timeleft = 15; //15 sec timer
+  var downloadTimer = setInterval(function () {
+    const stopIt = () => {
+      //stop timer func
+      clearInterval(downloadTimer);
+      document.getElementById("clock").innerHTML =
+        "Start 2 Player Game (Timed)";
+      reStart(); //restart game
+    };
+    shuffleButton.addEventListener("click", stopIt); //if reset button is clicked, game resets
+    if (timeleft <= 0) {
+      //when the timer hits zero
+      clearInterval(downloadTimer); //clear the clock
+      document.getElementById("clock").innerHTML = "Time is Up! + Player 2 Go!"; //alert player 2 turn
+      let player1 = document.getElementById("player1");
+      player1.innerHTML = "Player1 Score: " + `${scoreSum}`; //this will push P1 score to the screen
+      finalArray2.push(scoreSum); //push p1 score to an array to figure out who won game
+      console.log(finalArray2); //show me that the array is working
+      scoreSum = 0; //reset score for next turn
+      countdown2(); //make a new timer for p2
+      //reStart()
     } else {
-      document.getElementById("clock").innerHTML = timeleft + " seconds remaining";
+      document.getElementById("clock").innerHTML =
+        timeleft + " seconds remaining";
+      winningA = [];
     }
     timeleft -= 1;
   }, 1000);
-  } 
+};
+
+
+
+
+
+
+
+
+///old code 
 
 
  //press reset and then start again new game?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //dom stuff
 // document.addEventListener("DOMContentLoaded", () => {

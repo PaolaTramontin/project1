@@ -1,94 +1,98 @@
-
-/* INFO ABOUT THE DIVS */
-.square:hover {
-    background-color:rgb(9, 29, 119);
+.container {        /* INFO ABOUT THE CONTAINER WITH DIVS INSIDE*/
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    padding-left: 700px;
+    padding-right: 700px;
+    padding-left: 700px;
+    padding-top: 100px;
 }
 
-.square {
-   /* height:900px;
+.square:hover {   /* INFO ABOUT THE DIVS */
+	background-color: rgb(9, 29, 119);
+}
+
+.square {       /* divs */
+	/* height:900px;
     width:700px; */
-    border:10px solid white;
-    font-size:150px;
-    background-color:rgba(0, 0, 0, 0.4);
+	border: 10px solid white;
+	font-size: 150px;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	height: 700px;
+	width: 500px;
+}
+
+p{      /* INFO ABOUT THE PARAGRAPHS */
+    font-size:0px;
+}
+
+body {  /* INFO ABOUT THE BODY & BACKGROUND IMG */
+    background-image: url('https://wallpaperaccess.com/full/476735.jpg');
+    background-repeat: no-repeat;
+    background-color:black;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    width:100vw;
+} 
+
+#matchFound { /* pop up div when matches are found */
+	padding-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-content: center;
+	width: 50%;
+	margin-top: 1600px;
+	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(5, 18, 36, 1) 35%, rgba(0, 212, 255, 1) 100%);
+	margin-bottom: 5px;
+	position: absolute;
+	z-index: 1;
+}
+
+#matchInnerText {  /* style the innertext of match found div */
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
     color:white;
-    height:700px;
-    width:500px;
+    width:100%;
+    height:100%;
+    font-size:95px;
+    padding-top: 1px;
+    font-family: Apple Chancery, cursive;
+    text-align:center;
+    border:2px solid red;
+    margin-bottom:10px; 
 }
 
-
-#matchFound {
-/*display:flex;
-padding-top: 100px;
-border:2px solid red;
-height:200px;
-padding-top: 10px;
-position: absolute;
-margin-top:600px; */
-padding-top: 10px;
-display:flex;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: center;
-width:50%;
-margin-top:1600px; 
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,18,36,1) 35%, rgba(0,212,255,1) 100%);
-margin-bottom: 5px;
-position:absolute;
-z-index:1;
+#player1Wins {  /* pop up when p1 wins */
+	background-size: 100% 100%;
+	display: inline-block;
+	align-items: center;
+	padding-top: 70px;
+	flex-wrap: wrap;
+	align-content: center;
+	width: 1700px;
+	height: 999px;
+	margin-top: 1600px;
+	/*background-color:rgba(247, 246, 246, 0.8);*/
+	background-image: url('https://www.maxim.com/.image/t_share/MTQ5MTAwODcxNDc1NTM2OTUx/game-of-thrones.png');
+	margin-bottom: 5px;
+	position: absolute;
+	z-index: 1;
+	font-family: Stencil Std, fantasy;
+	color: black;
+	font-size: 165px;
+	border: 35px solid white;
 }
 
-
-
-
-#player1Wins{
-
-    background-size: 100% 100%;
-    display: inline-block;
-    align-items: center;
-    padding-top:70px;
-    flex-wrap: wrap;
-    align-content: center;
-    width:1700px;
-    height:999px;
-    margin-top:1600px; 
-    /*background-color:rgba(247, 246, 246, 0.8);*/
-    background-image: url('https://www.maxim.com/.image/t_share/MTQ5MTAwODcxNDc1NTM2OTUx/game-of-thrones.png');
-    margin-bottom: 5px;
-    position:absolute;
-    z-index:1;
-    font-family:Stencil Std, fantasy;
-    color:black;
-    font-size:165px;
-    border:35px solid white;
-
-}
-
-#tieGame{
-
-    background-size: 100% 100%;
-    display: inline-block;
-    align-items: center;
-    padding-top:70px;
-    flex-wrap: wrap;
-    align-content: center;
-    width:1700px;
-    height:999px;
-    margin-top:1600px; 
-    /*background-color:rgba(247, 246, 246, 0.8);*/
-    background-image: url('https://deadline.com/wp-content/uploads/2019/04/courtesy-of-hbo-5-e1556506599408.jpg?w=681&h=383&crop=1');
-    margin-bottom: 5px;
-    position:absolute;
-    z-index:1;
-    font-family:Stencil Std, fantasy;
-    color:black;
-    font-size:165px;
-    border:35px solid white;
-
-}
-
-
-#player2Wins{
-    
+#player2Wins{  /* pop up when p2 wins */
     background-size: 100% 100%;
     display: inline-block;
     align-items: center;
@@ -107,13 +111,51 @@ z-index:1;
     color:black;
     font-size:165px;
     border:35px solid gray;
-    
-
 }
 
+#tieGame{  /* pop up when game is tied */
+    background-size: 100% 100%;
+    display: inline-block;
+    align-items: center;
+    padding-top:70px;
+    flex-wrap: wrap;
+    align-content: center;
+    width:1700px;
+    height:999px;
+    margin-top:1600px; 
+    /*background-color:rgba(247, 246, 246, 0.8);*/
+    background-image: url('https://deadline.com/wp-content/uploads/2019/04/courtesy-of-hbo-5-e1556506599408.jpg?w=681&h=383&crop=1');
+    margin-bottom: 5px;
+    position:absolute;
+    z-index:1;
+    font-family:Stencil Std, fantasy;
+    color:black;
+    font-size:165px;
+    border:35px solid white;
+}
 
+#allMatchesFound { /* img div that pops up when single player wins */
+    background-size: 100% 100%;
+    display: inline-block;
+    align-items: center;
+    padding-top:70px;
+    flex-wrap: wrap;
+    align-content: center;
+    width:2500px;
+    height:1300px;
+    margin-top:1600px; 
+    /*background-color:rgba(247, 246, 246, 0.8);*/
+    background-image: url('https://i.insider.com/573944bfdd089531428b4626?width=1100&format=jpeg&auto=webp');
+    margin-bottom: 5px;
+    position:absolute;
+    z-index:1;
+    font-family:Stencil Std, fantasy;
+    color:black;
+    font-size:165px;
+    border:35px solid gray;
+}
 
-#clock{
+#clock{  /*  this is the timer */
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -139,9 +181,7 @@ z-index:1;
     transform: scale(1.2);
   }
 
-
-
-#score{
+#score{  /*  score div with digit status*/
     width: 200px;
     height:80px; 
     color:white;
@@ -153,7 +193,7 @@ z-index:1;
   /*  background-color:rgba(255, 254, 254, 0.293); */
 }
 
-#scoreHeader{
+#scoreHeader{  /*  this is the div that says game score */
     height:80px; 
     color:white;
     font-size:120px; 
@@ -162,101 +202,29 @@ z-index:1;
     align-self:flex-start;
     padding-top: 30px;
     font-family: Apple Chancery, cursive;
-   /* background-color:rgba(255, 254, 254, 0.293); */
-    /*display:inline-block
-    border:2px solid yellow;
-    width: 975px;;
-    height:200px;
-    font-size:175px;
-    color:white;
-    padding-right: 30px; */
 }
 
-
-#ScoreContainer{
-   /* display:flex;
-    border:2px solid green; 
-    justify-content: flex-start;
-    align-content: center; 
-    padding-left: 700px;
-    padding-right: 700px;
-    padding-left: 300px;
-    padding-top: 100px; */
+#ScoreContainer{  /* parent div for score and scoreheader */
     margin-left: 1px;
     justify-content:flex-start;
     align-content: center; 
     text-align: center;
-    
 }
 
-#matchInnerText {
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    color:white;
+img{  /* INFO ABOUT THE IMGS INSIDE EACH DIV */
     width:100%;
     height:100%;
-    font-size:95px;
-    padding-top: 1px;
-    font-family: Apple Chancery, cursive;
-    text-align:center;
-    border:2px solid red;
-    margin-bottom:10px; 
-}
-
-/* INFO ABOUT THE CONTAINER */
-.container {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: center;
-    padding-left: 700px;
-    padding-right: 700px;
-    padding-left: 700px;
-    padding-top: 100px;
-}
-
-/* INFO ABOUT THE PARAGRAPHS */
-
-p{
-    font-size:0px;
-}
-
-/* INFO ABOUT THE BODY & BACKGROUND IMG */
-body {
-    background-image: url('https://wallpaperaccess.com/full/476735.jpg');
-    background-repeat: no-repeat;
-    background-color:black;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
-    align-items: center;
-    width:100vw;
-} 
-
-/* INFO ABOUT THE IMGS INSIDE EACH DIV */
-img{
-    width:100%;
-    height:100%;
-    
     align-content: center;
 }
 
-
-/* INFO ABOUT THE HEADER */
-header {
+header {  /* INFO ABOUT THE HEADER */
     width: 60%;
     display:flex;
     align-content: center;
-    justify-content: center;
-    
+    justify-content: center; 
 }
 
-/* INFO ABOUT THE HEADER IMG */
-#headerPic{
+#headerPic{  /* INFO ABOUT THE HEADER IMG */
     margin-top:50px;
     width: 63%;
     height:10%;
@@ -264,10 +232,7 @@ header {
    /* opacity:0.9; */
 }
 
-
-  /* INFO ABOUT THE BUTTONS */
-
- #button {
+ #button { /* startplayer1 button styling */
      /*position:absolute; */
      /*left:2400px;  */
      height:130px;
@@ -281,13 +246,13 @@ header {
      margin-left:auto;
      margin-right:auto; */
      cursor: pointer;
-    align-content: center;
-    font-family: Apple Chancery, cursive;
-    color:white;
-    background: radial-gradient(circle, rgba(8,142,205,1) 10%, rgba(5,18,36,0.8507449127906976) 49%, rgba(255,255,255,0.7257449127906976) 100%);
+     align-content: center;
+     font-family: Apple Chancery, cursive;
+     color:white;
+     background: radial-gradient(circle, rgba(8,142,205,1) 10%, rgba(5,18,36,0.8507449127906976) 49%, rgba(255,255,255,0.7257449127906976) 100%);
  }    
  
- #buttonShuffle {
+ #buttonShuffle {   /* reset button styling */
     /*position:absolute; */
     /*left:2400px;  */
     height:130px;
@@ -319,8 +284,7 @@ header {
     transform: skew(-10deg);
   }
 
-
-.buttonsDiv {
+.buttonsDiv {   /* parent button div */
     display:flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -329,7 +293,7 @@ header {
     margin:5rem 0;
 }
 
-#player1{
+#player1{   /* player1 on screen div */
     margin-top:200px;
     height:200px;
     width:700px;
@@ -342,7 +306,7 @@ header {
     border:2px solid gray;
 }
 
-#player2{
+#player2{   /* player1 on screen div */
     margin-top:400px;
     height:200px;
     width:700px;
@@ -402,7 +366,6 @@ header {
 #div10{
     order:10;
 }
-
 
 #div11{
     order:11;
