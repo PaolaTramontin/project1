@@ -1,5 +1,6 @@
 console.log("hi");
 
+
 //GLOBAL VARIABLES
 let container =document.getElementsByClassName("container")
 let squares = document.querySelectorAll(".square");
@@ -892,6 +893,8 @@ const reStart = () => {   //THIS FUNCTION RESETS THE ENTIRE GAME
   scoreSum2 = 0;
   finalArray = [];
   finalArray2 = [];
+
+
 };
 
 const winner = () => {   //WINNING LOGIC, SINGLE PLAYER
