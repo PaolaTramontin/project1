@@ -985,7 +985,7 @@ const countdown2 = () => {  //timeout for player 2 and has the winner logic
 
   //reset score
   score.innerHTML=0   //resets the score on the screen for P2
-  var timeleft = 15; //give p2 15 sec timer 
+  var timeleft = 20; //give p2 15 sec timer 
   var downloadTimer = setInterval(function(){
 
     const stopIt = ()=> {    //stop timer func in case player presses reset
@@ -1064,7 +1064,7 @@ const countdown = () => {
   //timeout for player 1 and pushes the score for p1 to screen
   addEvents();
 
-  var timeleft = 15; //15 sec timer
+  var timeleft = 20; //15 sec timer
   var downloadTimer = setInterval(function () {
     const stopIt = () => {
       //stop timer func
