@@ -56,7 +56,7 @@ body {  /* INFO ABOUT THE BODY & BACKGROUND IMG */
 	z-index: 1;
 }
 
-#matchInnerText {  /* style the innertext of match found div */
+#matchInnerText {  /* style the innertext of match found div .. done*/
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -155,7 +155,7 @@ body {  /* INFO ABOUT THE BODY & BACKGROUND IMG */
     border:35px solid gray;
 }
 
-#clock{  /*  this is the timer */
+#clock{  /*  this is the timer ..done */
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -181,7 +181,7 @@ body {  /* INFO ABOUT THE BODY & BACKGROUND IMG */
     transform: scale(1.2);
   }
 
-#score{  /*  score div with digit status*/
+#score{  /*  score div with digit status ...done*/
     width: 200px;
     height:80px; 
     color:white;
@@ -193,7 +193,7 @@ body {  /* INFO ABOUT THE BODY & BACKGROUND IMG */
   /*  background-color:rgba(255, 254, 254, 0.293); */
 }
 
-#scoreHeader{  /*  this is the div that says game score */
+#scoreHeader{  /*  this is the div that says game score ...done*/
     height:80px; 
     color:white;
     font-size:120px; 
@@ -204,7 +204,7 @@ body {  /* INFO ABOUT THE BODY & BACKGROUND IMG */
     font-family: Apple Chancery, cursive;
 }
 
-#ScoreContainer{  /* parent div for score and scoreheader */
+#ScoreContainer{  /* parent div for score and scoreheader ..done */
     margin-left: 1px;
     justify-content:flex-start;
     align-content: center; 
@@ -232,7 +232,7 @@ header {  /* INFO ABOUT THE HEADER .. done */
    /* opacity:0.9; */
 }
 
- #button { /* startplayer1 button styling */
+ #button { /* startplayer1 button styling  ..done*/
      /*position:absolute; */
      /*left:2400px;  */
      height:130px;
@@ -252,7 +252,7 @@ header {  /* INFO ABOUT THE HEADER .. done */
      background: radial-gradient(circle, rgba(8,142,205,1) 10%, rgba(5,18,36,0.8507449127906976) 49%, rgba(255,255,255,0.7257449127906976) 100%);
  }    
  
- #buttonShuffle {   /* reset button styling */
+ #buttonShuffle {   /* reset button styling ..done*/
     /*position:absolute; */
     /*left:2400px;  */
     height:130px;
@@ -284,7 +284,7 @@ header {  /* INFO ABOUT THE HEADER .. done */
     transform: skew(-10deg);
   }
 
-.buttonsDiv {   /* parent button div */
+.buttonsDiv {   /* parent button div ..done*/
     display:flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -441,21 +441,162 @@ header {  /* INFO ABOUT THE HEADER .. done */
         #headerPic{  /* INFO ABOUT THE HEADER IMG */
             width: 100%;
             height:100%;
-            margin-top:0px;
+            margin-top:10px;
             margin-left:10px;
            /* opacity:0.9; */
         }
+          
+        #matchInnerText {  /* style the innertext of match found div */
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            width:100%;
+            height:100%;
+            font-size:8px;
+            padding-top: 1px;
+            font-family: Apple Chancery, cursive;
+            text-align:center;
+            border:2px solid red;
+            margin-bottom:10px; 
+        }
        
+        #clock{  /*  this is the timer */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border:5px navy;
+            margin-top:30px;
+            width:30%;
+            height:30%;;
+            color:white;
+            background: radial-gradient(circle, rgba(8,142,205,1) 10%, rgba(5,18,36,0.8507449127906976) 49%, rgba(255,255,255,0.7257449127906976) 100%);
+            font-size:5px;
+            border: 4px solid #063b5e;
+            cursor: pointer;
+            font-family: Apple Chancery, cursive;
+        }
        
+        #button { /* startplayer1 button styling */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border:5px navy;
+            margin-top:0px;
+            width:40%;
+            height:60%;;
+            color:white;
+            background: radial-gradient(circle, rgba(8,142,205,1) 10%, rgba(5,18,36,0.8507449127906976) 49%, rgba(255,255,255,0.7257449127906976) 100%);
+            font-size:3px;
+            border: 2px solid #063b5e;
+            cursor: pointer;
+            font-family: Apple Chancery, cursive;
+        } 
        
+        .buttonsDiv {   /* parent button div */
+            display:flex;
+            width:50%;
+            height: 90%;
+            margin-top:50px;
+        }
        
+        #buttonShuffle {   /* reset button styling */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border:5px navy;
+            margin-top:0px;
+            margin-bottom:5px;
+            width:30%;
+            height:60%;;
+            color:white;
+            background: radial-gradient(circle, rgba(8,142,205,1) 10%, rgba(5,18,36,0.8507449127906976) 49%, rgba(255,255,255,0.7257449127906976) 100%);
+            font-size:3px;
+            border: 2px solid #063b5e;
+            cursor: pointer;
+            font-family: Apple Chancery, cursive;
+        } 
        
-       
-       
-       
-       
-       
-       
+        #ScoreContainer{  /* parent div for score and scoreheader */
+            display:inline-row;
+            width:50%;
+            height: 50%;
+            margin-top:0px;
+        }
+
+        #score{  /*  score div with digit status*/
+            justify-content: center;
+            align-items: center;
+            border:5px navy;
+            margin-top:0px;
+            width:40%;
+            height:0%;;
+            color:white;
+            font-size:10px;
+            font-family: Apple Chancery, cursive;
+        }
+
+        #scoreHeader{  /*  this is the div that says game score */
+            align-items: center;
+            border:5px navy;
+            margin-top:0px;
+            width:40%;
+            height:60%;;
+            color:white;
+            font-size:10px;
+            font-family: Apple Chancery, cursive;
+        }
+
+        .container {        /* INFO ABOUT THE CONTAINER WITH DIVS INSIDE*/
+            display:flex;
+            flex-wrap: flex;
+            border:5px solid red;
+            height: 100%;
+            width: 80%;
+            margin-left:10px;
+            margin-right:10px;
+            margin-bottom:60px;
+            justify-content: space-between;
+        }
+
+        .square {       /* divs */
+            /* height:900px;
+            width:700px; */
+            border: 5px solid white;
+            font-size: 10px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            height: 60%;
+            width: 15%;
+            border:2px solid yellow;
+            align-self: center;
+        }
+        
+        img{  /* INFO ABOUT THE IMGS INSIDE EACH DIV */
+            width:100%;
+            height:100%;
+            align-content: center;
+        }
+
+        #player1{   /* player1 on screen div */
+            height:50%;
+            width:50%;
+            font-size:10px;
+            color:white;
+            font-family: Apple Chancery, cursive;
+            background-color:rgba(0, 0, 0, 0.4);
+            border:2px solid pink;
+        }
+
+
+
+
+
+
+
+
+
+
        
        
         }
