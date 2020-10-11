@@ -3,6 +3,13 @@ App Demo https://paolatramontin.github.io/project1/
 
 Project Title: Game of Thrones Memory Game
 
+
+Game Instructions:
+
+1 Player instructions:
+
+
+
 Concept:
 The game I created is a memory card with 6 total matches. The user can choose between playing by themselves or with another player. The single player mode is not timed. Therefore, and the user can take their time finding all the matches. The 2 player mode is timed to give the users a more competitive experience. In addition, I created a reset button so that the game can restart at any given time.  
 

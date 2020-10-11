@@ -1063,7 +1063,7 @@ const addEvents = ()=> { //has all the event listeners. stops it from being clic
   shuffleButton.addEventListener("click", shuffle);
 }
 
-const countdown = () => {
+const countdown = () => {  //timeout for player 1
   //timeout for player 1 and pushes the score for p1 to screen
   addEvents();
 
