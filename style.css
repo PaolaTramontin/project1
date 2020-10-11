@@ -375,9 +375,7 @@ header {  /* INFO ABOUT THE HEADER .. done */
 
 /* I am trying to make this project, iphone friendly. please dont mind the code below */
 
-       @media only screen 
-       and (min-device-width : 320px) 
-       and (max-device-height: 812px)  { 
+@media only screen and (min-width: 375px) and (max-width: 767px) { 
            
         
         body{
@@ -541,35 +539,26 @@ header {  /* INFO ABOUT THE HEADER .. done */
         }
 
         #player1{   /* player1 on screen div */
-           height:30%;
-            width:30%;
-            font-size:1px;
+           height:0%;
+            width:0%;
+            font-size:0px;
             color:white;
             font-family: Apple Chancery, cursive;
-            border:2px solid pink;
+ 
         }
 
         #player2{   /* player1 on screen div */
-            height:50%;
-            width:50%;
-            font-size:5px;
+            height:0%;
+            width:0%;
+            font-size:0px;
             color:white;
             font-family: Apple Chancery, cursive;
             background-color:rgba(0, 0, 0, 0.4);
-            border:2px solid pink;
-            
-        } */
-
-
-
-
-
-
-
-
-       
-       
         }
-    
+
+
+        } 
+
+
     
     
