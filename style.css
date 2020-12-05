@@ -395,6 +395,10 @@ header {  /* INFO ABOUT THE HEADER .. done */
 
 @media screen and (min-width: 100px) and (max-width: 480px) {
 
+    html {
+        overflow: hidden;
+    }
+
     .container {       
         display:flex;
         flex-direction: row;
@@ -403,7 +407,7 @@ header {  /* INFO ABOUT THE HEADER .. done */
         align-content: center;
         width:50%;
         height:65vw;
-        margin-top:40vw;
+        margin-top:25vw;
     }
 
 
@@ -413,7 +417,144 @@ header {  /* INFO ABOUT THE HEADER .. done */
         color: white;
         height: 40%;
         width: 20%;
-    
     }
+
+    body{
+        background-image: url('https://wallpapercave.com/wp/wp4921185.jpg');
+      }
+
+      #matchFound { /* pop up div when matches are found */
+        margin-top: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: center;
+        width: 50%;
+        height:5%;
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(5, 18, 36, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        position: absolute;
+        z-index: 1;
+        text-align:center;
+    }
+    
+    #matchInnerText {  /* style the innertext of match found div .. done*/
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        color:white;
+        width:98%;
+        height:85%;
+        font-size:4vw;
+        font-family: Apple Chancery, cursive;
+        text-align:center;
+        border:.7vw solid red;
+        /* padding-top: 1vw; */
+    }
+
+    #player1Wins {  /* pop up when p1 wins */
+        background-image: url('https://www.maxim.com/.image/t_share/MTQ5MTAwODcxNDc1NTM2OTUx/game-of-thrones.png');
+        background-size: 100% 100%;
+        display: inline-block;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 80%;
+        height: 30%;
+        margin-top: 50vw;
+        position: absolute;
+        z-index: 1;
+        font-family: Stencil Std, fantasy;
+        color: black;
+        font-size:10vw;
+        border: .5vw solid white;
+    }
+
+
+    #player2Wins{  /* pop up when p2 wins */
+        background-size: 100% 100%;
+        display: inline-block;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 80%;
+        height: 30%;
+        margin-top: 50vw;
+        background-image: url('https://goombastomp.com/wp-content/uploads/2019/04/Game-of-Thrones-Soundtrack-Best-Songs.jpg');
+        position:absolute;
+        z-index:1;
+        font-family:Stencil Std, fantasy;
+        color:black;
+        font-size:10vw;
+        border: .7vw solid gray;
+    }
+
+    #tieGame{  /* pop up when game is tied */
+        background-size: 100% 100%;
+        display: inline-block;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 80%;
+        height: 30%;
+        margin-top: 50vw;
+        background-image: url('https://deadline.com/wp-content/uploads/2019/04/courtesy-of-hbo-5-e1556506599408.jpg?w=681&h=383&crop=1');
+        position:absolute;
+        z-index:1;
+        font-family:Stencil Std, fantasy;
+        color:black;
+        font-size:10vw;
+        border:.7vw solid white;
+    }
+
+    #allMatchesFound { /* img div that pops up when single player wins */
+        background-size: 100% 100%;
+        display: inline-block;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 80%;
+        height: 30%;
+        margin-top: 50vw;
+        background-image: url('https://i.insider.com/573944bfdd089531428b4626?width=1100&format=jpeg&auto=webp');
+        position:absolute;
+        z-index:1;
+        font-family:Stencil Std, fantasy;
+        color:black;
+        font-size:10vw;
+        border:.5vw solid gray;
+    }
+
+    #clock{  /*  this is the timer ..done */
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        width:20%;
+        height:3vw;
+        margin-top: 8vw;
+        color:white;
+        background: radial-gradient(circle, rgba(8,142,205,1) 10%, rgba(5,18,36,0.8507449127906976) 49%, rgba(255,255,255,0.7257449127906976) 100%);
+        font-size:1.3vw;
+        cursor: pointer;
+        font-family: Apple Chancery, cursive;
+        border: .3vw solid #063b5e;
+    }
+
+
+
+    #ScoreContainer{  /* parent div for score and scoreheader ..done */
+        justify-content:flex-start;
+        align-content: center; 
+        text-align: center;
+        margin-bottom:-17vw;
+        border:1px solid red;
+    }
+
+
+    #headerPic{  /* INFO ABOUT THE HEADER IMG ..done*/
+        margin-top:17vw;
+        height:35%; 
+        width: 65%;  
+    }
+
 
 }
