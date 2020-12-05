@@ -421,6 +421,8 @@ header {  /* INFO ABOUT THE HEADER .. done */
 
     body{
         background-image: url('https://wallpapercave.com/wp/wp4921185.jpg');
+        background-size: 95% 95%;
+       
       }
 
       #matchFound { /* pop up div when matches are found */
@@ -552,8 +554,8 @@ header {  /* INFO ABOUT THE HEADER .. done */
 
     #headerPic{  /* INFO ABOUT THE HEADER IMG ..done*/
         margin-top:17vw;
-        height:35%; 
-        width: 65%;  
+        height:20vw; 
+        width: 100%;  
     }
 
 
