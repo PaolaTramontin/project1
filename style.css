@@ -535,9 +535,9 @@ header {  /* INFO ABOUT THE HEADER .. done */
         margin-top: 8vw;
         color:white;
         background: radial-gradient(circle, rgb(205, 8, 24) 10%, rgba(5,18,36,0.8507449127906976) 49%, rgba(255,255,255,0.7257449127906976) 100%);
-        font-size:3vw;
+        font-size:2.3vw;
         cursor: pointer;
-        font-family: Apple Chancery, cursive;
+        font-family: 'Oswald', sans-serif;
         border: .3vw solid #063b5e;
         margin-top:-5vw;
     }
@@ -549,7 +549,7 @@ header {  /* INFO ABOUT THE HEADER .. done */
         align-content: center; 
         text-align: center;
         margin-top:-15vw;
-        /* border:1px solid red; */
+        /* border:1px solid gray; */
     }
 
 
@@ -561,18 +561,22 @@ header {  /* INFO ABOUT THE HEADER .. done */
 
     #scoreHeader{
         font-size:6vw;
+        /* color:rgb(56, 55, 55); */
+        font-family: 'Oswald', sans-serif;
     }
 
     #button{
         width:50%;
         height:6vw; 
         font-size:3vw;
+        font-family: 'Oswald', sans-serif;
     }
 
     #buttonShuffle{
         width:50%;
         height:6vw; 
         font-size:3vw;
+        font-family: 'Oswald', sans-serif;
     }
 
     #player1{
@@ -587,5 +591,10 @@ header {  /* INFO ABOUT THE HEADER .. done */
         width:0%;
         height:0%;
         border:0px;
+    }
+
+    #score{
+        font-size:6vw;
+        font-family: 'Oswald', sans-serif;
     }
 }
